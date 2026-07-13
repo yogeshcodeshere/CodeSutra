@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model NamasteConcept {
+  id            Int      @id @default(autoincrement())
+  code          String   @unique
+  display       String
+  definition    String?
+  category      String
+  nativeTerm    String?
+  version       String
+  effectiveDate DateTime
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Icd11Concept {
+  id         Int      @id @default(autoincrement())
+  entityId   String   @unique
+  code       String
+  title      String
+  definition String?
+  chapter    String
+  parentId   String?
+  uri        String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([chapter])
+  @@index([code])
+}
+
+model NamasteTm2Mapping {
+  id          Int      @id @default(autoincrement())
+  namasteCode String
+  tm2Code     String
+  equivalence String
+  notes       String?
+  confidence  Float    @default(0.75)
+  reviewedBy  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([namasteCode, tm2Code])
+  @@index([namasteCode])
+  @@index([tm2Code])
+}
+
+model AuditLog {
+  id            Int      @id @default(autoincrement())
+  actorAbhaId   String?
+  role          String?
+  action        String
+  resourceType  String?
+  resourceId    String?
+  outcome       String
+  consentStatus String?
+  timestamp     DateTime @default(now())
+}
+
+model ProblemListEntry {
+  id               Int      @id @default(autoincrement())
+  patientAbhaId    String
+  namasteCode      String
+  tm2Code          String?
+  biomedicineCode  String?
+  displayText      String
+  clinicalStatus   String
+  recordedByAbhaId String
+  recordedAt       DateTime
+  consentId        String
+  version          Int
+  isCurrent        Boolean  @default(true)
+  createdAt        DateTime @default(now())
+
+  @@index([patientAbhaId])
+  @@index([namasteCode])
+  @@index([patientAbhaId, namasteCode, isCurrent])
+}

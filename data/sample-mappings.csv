@@ -1,0 +1,6 @@
+namaste_code,tm2_code,equivalence,notes,confidence,reviewed_by
+NAM001,TM2-001,relatedto,Jwara aligns with fever-related TM2 disorder pattern but is not a strict one-to-one match,0.82,demo-reviewer
+NAM002,TM2-002,wider,Prameha is broader than a single urinary or metabolic TM2 pattern,0.78,demo-reviewer
+NAM003,TM2-003,relatedto,Kasa aligns with cough disorder pattern for demo dual coding,0.84,demo-reviewer
+NAM004,TM2-004,relatedto,Siddha Azhal Noi is mapped to a broad heat-related TM2 pattern,0.72,demo-reviewer
+NAM005,TM2-001,relatedto,Humma is a Unani fever concept mapped to the demo TM2 fever pattern,0.8,demo-reviewer

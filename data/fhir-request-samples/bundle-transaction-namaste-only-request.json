@@ -1,0 +1,41 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:condition-swagger-demo",
+      "resource": {
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/swagger-demo-patient"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Swagger demo NAMASTE-only diagnosis",
+          "coding": [
+            {
+              "system": "https://namaste.ayush.gov.in/fhir/CodeSystem/namaste",
+              "code": "NAM001",
+              "display": "Jwara"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:consent-swagger-demo",
+      "resource": {
+        "resourceType": "Consent",
+        "id": "consent-swagger-demo",
+        "status": "active"
+      }
+    }
+  ]
+}

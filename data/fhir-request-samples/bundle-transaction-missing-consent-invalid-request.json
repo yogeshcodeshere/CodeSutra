@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:condition-missing-consent-demo",
+      "resource": {
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/missing-consent-demo-patient"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Invalid missing-consent demo diagnosis",
+          "coding": [
+            {
+              "system": "https://namaste.ayush.gov.in/fhir/CodeSystem/namaste",
+              "code": "NAM001",
+              "display": "Jwara"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

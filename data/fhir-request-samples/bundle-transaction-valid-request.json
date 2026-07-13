@@ -1,0 +1,46 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:condition-valid-demo",
+      "resource": {
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/valid-demo-patient"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Valid dual-coded demo diagnosis",
+          "coding": [
+            {
+              "system": "https://namaste.ayush.gov.in/fhir/CodeSystem/namaste",
+              "code": "NAM001",
+              "display": "Jwara"
+            },
+            {
+              "system": "https://id.who.int/icd/release/11/tm2",
+              "code": "TM2-001",
+              "display": "Fever disorder pattern"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:consent-valid-demo",
+      "resource": {
+        "resourceType": "Consent",
+        "id": "consent-valid-demo",
+        "status": "active"
+      }
+    }
+  ]
+}

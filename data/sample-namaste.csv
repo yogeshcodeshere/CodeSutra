@@ -1,0 +1,6 @@
+code,display,nativeTerm,definition,category,version,effectiveDate
+NAM001,Jwara,ज्वर,Fever or febrile condition described in Ayurveda,ayurveda,2026-demo,2026-01-01
+NAM002,Prameha,प्रमेह,Urinary disorder cluster often discussed with metabolic illness,ayurveda,2026-demo,2026-01-01
+NAM003,Kasa,कास,Cough as described in traditional diagnosis,ayurveda,2026-demo,2026-01-01
+NAM004,Azhal Noi,அழல் நோய்,Siddha heat-related disease pattern,siddha,2026-demo,2026-01-01
+NAM005,Humma,حمى,Fever concept in Unani terminology,unani,2026-demo,2026-01-01

@@ -1,0 +1,56 @@
+[
+  {
+    "entityId": "tm2-jwara",
+    "code": "TM2-001",
+    "title": "Fever disorder pattern",
+    "definition": "Traditional medicine disorder pattern associated with fever.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-jwara"
+  },
+  {
+    "entityId": "tm2-prameha",
+    "code": "TM2-002",
+    "title": "Urinary and metabolic disorder pattern",
+    "definition": "Traditional medicine disorder pattern associated with urinary and metabolic symptoms.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-prameha"
+  },
+  {
+    "entityId": "tm2-kasa",
+    "code": "TM2-003",
+    "title": "Cough disorder pattern",
+    "definition": "Traditional medicine disorder pattern associated with cough.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kasa"
+  },
+  {
+    "entityId": "tm2-azhal-noi",
+    "code": "TM2-004",
+    "title": "Heat-related traditional disorder pattern",
+    "definition": "Traditional medicine heat-related disorder pattern.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-azhal-noi"
+  },
+  {
+    "entityId": "icd-diabetes",
+    "code": "5A10",
+    "title": "Type 2 diabetes mellitus",
+    "definition": "Biomedicine diagnosis used as a common comorbidity in Ayush workflows.",
+    "chapter": "biomedicine",
+    "parentId": "chapter-05",
+    "uri": "https://id.who.int/icd/entity/icd-diabetes"
+  },
+  {
+    "entityId": "icd-hypertension",
+    "code": "BA00",
+    "title": "Essential hypertension",
+    "definition": "Biomedicine diagnosis used as a common comorbidity in Ayush workflows.",
+    "chapter": "biomedicine",
+    "parentId": "chapter-11",
+    "uri": "https://id.who.int/icd/entity/icd-hypertension"
+  }
+]

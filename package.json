@@ -1,0 +1,51 @@
+{
+  "name": "namaste-icd11-terminology-service",
+  "version": "0.1.0",
+  "description": "FHIR R4 terminology microservice for NAMASTE and ICD-11 TM2 dual coding.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "node tests/setupTestDb.js && jest --runInBand",
+    "ingest:namaste": "node src/scripts/ingestNamaste.js data/sample-namaste.csv",
+    "sync:icd11": "node src/scripts/syncIcd11.js",
+    "seed:mappings": "node src/scripts/seedMappings.js data/sample-mappings.csv",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy"
+  },
+  "keywords": [
+    "fhir",
+    "icd-11",
+    "namaste",
+    "terminology"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "prisma": "^5.22.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "setupFiles": [
+      "<rootDir>/tests/setupEnv.js"
+    ]
+  }
+}
