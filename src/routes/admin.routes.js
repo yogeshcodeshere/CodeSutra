@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { syncIcd11Handler } = require("../controllers/admin.controller");
+const { demoResetHandler, syncIcd11Handler } = require("../controllers/admin.controller");
 const { requireAuth, requireRole } = require("../middleware/auth");
 const { ROLES } = require("../lib/rbac");
 
@@ -29,5 +29,20 @@ const router = express.Router();
  *         description: Invalid source query parameter
  */
 router.post("/sync/icd11", requireAuth, requireRole(ROLES.ADMIN), syncIcd11Handler);
+
+/**
+ * @openapi
+ * /admin/demo-reset:
+ *   post:
+ *     summary: Reset demo data and reseed sample terminology
+ *     tags:
+ *       - Admin
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Demo data reset summary
+ */
+router.post("/demo-reset", requireAuth, requireRole(ROLES.ADMIN), demoResetHandler);
 
 module.exports = router;

@@ -22,7 +22,7 @@ function createApp() {
 
   app.use(helmet());
   app.use(cors());
-  app.use(express.json({ limit: "2mb" }));
+  app.use(express.json({ limit: "2mb", type: ["application/json", "application/fhir+json"] }));
   app.use(morgan("combined"));
 
   app.get("/docs.json", (req, res) => {

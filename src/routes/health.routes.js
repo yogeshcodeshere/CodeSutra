@@ -16,7 +16,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.json({
     status: "ok",
-    service: "namaste-icd11-terminology-service"
+    service: "codesutra-api"
   });
 });
 

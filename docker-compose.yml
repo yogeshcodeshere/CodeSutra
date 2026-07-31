@@ -22,11 +22,24 @@ services:
         condition: service_healthy
     env_file:
       - .env
+    environment:
+      DATABASE_URL: postgresql://namaste:namaste@postgres:5432/namaste_icd11?schema=public
     ports:
       - "3000:3000"
     volumes:
       - .:/app
       - /app/node_modules
+    command: sh -c "npx prisma db push && npm run seed:demo && npm run dev"
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_BASE: http://localhost:3000
+    ports:
+      - "3001:3001"
     command: npm run dev
 
 volumes:

@@ -1,5 +1,6 @@
 const { syncIcd11 } = require("../services/icd11Sync");
 const { z } = require("zod");
+const { resetDemoData } = require("../services/demoData");
 
 const syncIcd11QuerySchema = z.object({
   source: z.enum(["sample", "live"]).default("sample")
@@ -37,4 +38,13 @@ async function syncIcd11Handler(req, res, next) {
   }
 }
 
-module.exports = { syncIcd11Handler, syncIcd11QuerySchema };
+async function demoResetHandler(req, res, next) {
+  try {
+    const summary = await resetDemoData();
+    res.json({ status: "ok", ...summary });
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { demoResetHandler, syncIcd11Handler, syncIcd11QuerySchema };

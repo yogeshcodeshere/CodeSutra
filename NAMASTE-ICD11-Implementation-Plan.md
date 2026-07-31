@@ -1,4 +1,4 @@
-# NAMASTE ↔ ICD-11 (TM2) FHIR Terminology Microservice
+# CodeSutra: NAMASTE to ICD-11 TM2 FHIR Terminology Microservice
 ## Implementation Plan, Phase Planner & AI Build Prompts
 
 ## Current Implementation Status
@@ -14,8 +14,8 @@
 - [x] Phase 6: Clinical Bundle ingestion, dual-coded Problem List persistence, versioning, consent checks, patient self-read checks, and tests.
 - [x] Phase 7: Compliance validation tests, auth coverage tests, FHIR sample dump script, audit coverage script, and `COMPLIANCE.md`.
 - [x] Manual testing workflow: executable Bundle request samples separated from response examples, Swagger Bundle request body example fixed, bearer-auth OpenAPI verified.
-- [x] Phase 8: Minimal Next.js + Tailwind frontend implemented with mock login, dual-code search, Bundle submission, and Problem List viewing.
-- [ ] Phase 9: Not started.
+- [x] Phase 8: CodeSutra Next.js + Tailwind frontend implemented with mock login, dual-code search, Bundle submission, Problem List viewing, and dark tech/herbs visual theme.
+- [x] Phase 9: Integration/demo packaging implemented with Docker Compose frontend/API/Postgres, demo seed/reset, README traceability, demo script, and backup recording checklist.
 
 Problem Statement: **SIH 25026** — Ministry of Ayush / AIIA
 
@@ -339,10 +339,12 @@ Build a minimal Next.js + Tailwind frontend for the terminology microservice, pr
 ### Phase 9 — Integration, Demo Script & Packaging
 **Goal:** Everything runs with one command and tells a clear story in 3 minutes.
 
-- [ ] `docker-compose up` brings up API + Postgres (+ frontend) in one shot, with a seed step auto-running NAMASTE ingestion + ICD-11 sync (using a small cached sample TM2/Biomedicine JSON checked into the repo, so the demo doesn't depend on live WHO API access) + mapping seed on first boot
-- [ ] Demo storyboard: login as clinician → dual-coded search → add to problem list → show audit log entry → show patient-role consent gating → show `/docs` Swagger for technical judges
-- [ ] README with architecture diagram + a requirement-to-endpoint traceability table
-- [ ] Backup screen recording in case live demo/network fails
+- [x] `docker-compose up` brings up API + Postgres + frontend in one shot, with a seed step auto-running NAMASTE ingestion + ICD-11 sample sync + mapping seed on boot
+- [x] Demo storyboard: login as clinician → dual-coded search → add to problem list → show audit log entry → show patient-role consent gating → show `/docs` Swagger for technical judges
+- [x] README with architecture diagram + a requirement-to-endpoint traceability table
+- [x] Backup screen recording checklist in case live demo/network fails
+- [x] `POST /admin/demo-reset` for ADMIN-only demo data reset and reseed between practice runs
+- [x] Full fresh Docker Compose rehearsal on this machine after the final UI polish; local Node `v25.9.0` stalls Next build/dev first render, so use Docker's Node 20 runtime or a local Node 20 install for this check
 
 **Prompt:**
 ```

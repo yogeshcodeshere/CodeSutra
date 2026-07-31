@@ -13,7 +13,8 @@ describe("protected route auth coverage", () => {
     ["post", "/fhir/ConceptMap/$translate"],
     ["post", "/fhir/Bundle"],
     ["get", "/fhir/Patient/demo/ProblemList"],
-    ["post", "/admin/sync/icd11?source=sample"]
+    ["post", "/admin/sync/icd11?source=sample"],
+    ["post", "/admin/demo-reset"]
   ];
 
   it.each(protectedRequests)("%s %s requires auth", async (method, path) => {
