@@ -35,7 +35,7 @@ const router = express.Router();
 router.get(
   /^\/\$expand$/,
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   validateRequest(expandRequestSchema),
   expandValueSetHandler
 );

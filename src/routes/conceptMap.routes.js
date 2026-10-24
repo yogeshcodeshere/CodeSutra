@@ -39,7 +39,7 @@ const router = express.Router();
 router.post(
   /^\/\$translate$/,
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   validateRequest(translateRequestSchema),
   translateCodeHandler
 );
@@ -60,7 +60,7 @@ router.post(
 router.get(
   "/namaste-to-tm2",
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   getNamasteToTm2ConceptMap
 );
 

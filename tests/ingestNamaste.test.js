@@ -18,7 +18,7 @@ describe("NAMASTE ingestion and CodeSystem", () => {
   it("ingests sample CSV and exposes a valid FHIR CodeSystem", async () => {
     const summary = await ingestNamasteCsv("data/sample-namaste.csv");
 
-    expect(summary.added).toBe(5);
+    expect(summary.added).toBe(100);
     expect(summary.skipped).toBe(0);
 
     const response = await request(createApp())
@@ -28,6 +28,6 @@ describe("NAMASTE ingestion and CodeSystem", () => {
     const parsed = fhirCodeSystemSchema.safeParse(response.body);
 
     expect(parsed.success).toBe(true);
-    expect(response.body.concept).toHaveLength(5);
+    expect(response.body.concept).toHaveLength(100);
   });
 });

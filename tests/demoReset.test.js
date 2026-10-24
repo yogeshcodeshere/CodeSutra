@@ -24,8 +24,9 @@ describe("POST /admin/demo-reset", () => {
       .expect(200);
 
     expect(response.body.status).toBe("ok");
-    await expect(prisma.namasteConcept.count()).resolves.toBe(5);
-    await expect(prisma.icd11Concept.count()).resolves.toBe(6);
-    await expect(prisma.namasteTm2Mapping.count()).resolves.toBe(5);
+    await expect(prisma.namasteConcept.count()).resolves.toBe(100);
+    await expect(prisma.icd11Concept.count()).resolves.toBe(104);
+    await expect(prisma.namasteTm2Mapping.count()).resolves.toBe(100);
+    await expect(prisma.user.count()).resolves.toBe(7);
   });
 });

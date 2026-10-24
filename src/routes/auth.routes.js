@@ -24,7 +24,7 @@ const router = express.Router();
  *                 type: string
  *               role:
  *                 type: string
- *                 enum: [CLINICIAN, CODER, PATIENT, ADMIN]
+ *                 enum: [CLINICIAN, PATIENT, ADMIN]
  *               facilityId:
  *                 type: string
  *     responses:

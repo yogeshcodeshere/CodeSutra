@@ -42,7 +42,7 @@ const router = express.Router();
 router.get(
   /^\/\$lookup$/,
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   validateRequest(lookupRequestSchema),
   lookupCodeHandler
 );
@@ -67,7 +67,7 @@ router.get(
 router.get(
   "/namaste",
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   getNamasteCodeSystem
 );
 
@@ -87,7 +87,7 @@ router.get(
 router.get(
   "/icd11-tm2",
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   getIcd11Tm2CodeSystem
 );
 
@@ -107,7 +107,7 @@ router.get(
 router.get(
   "/icd11-biomedicine",
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   getIcd11BiomedicineCodeSystem
 );
 

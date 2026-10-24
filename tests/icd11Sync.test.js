@@ -19,7 +19,7 @@ describe("ICD-11 sample sync and CodeSystems", () => {
     const summary = await syncIcd11({ source: "sample" });
 
     expect(summary.status).toBe("ok");
-    expect(summary.processed).toBe(6);
+    expect(summary.processed).toBe(104);
     expect(summary.failures).toHaveLength(0);
 
     const app = createApp();
@@ -34,8 +34,8 @@ describe("ICD-11 sample sync and CodeSystems", () => {
 
     expect(fhirCodeSystemSchema.safeParse(tm2Response.body).success).toBe(true);
     expect(fhirCodeSystemSchema.safeParse(biomedicineResponse.body).success).toBe(true);
-    expect(tm2Response.body.concept).toHaveLength(4);
-    expect(biomedicineResponse.body.concept).toHaveLength(2);
+    expect(tm2Response.body.concept).toHaveLength(99);
+    expect(biomedicineResponse.body.concept).toHaveLength(5);
   });
 
   it("reports live sync status based on processed and failures", () => {

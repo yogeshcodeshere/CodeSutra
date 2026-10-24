@@ -34,7 +34,7 @@ const router = express.Router();
 router.get(
   "/:abhaId/ProblemList",
   requireAuth,
-  requireRole(ROLES.CLINICIAN, ROLES.CODER, ROLES.PATIENT, ROLES.ADMIN),
+  requireRole(ROLES.CLINICIAN, ROLES.PATIENT, ROLES.ADMIN),
   validateRequest(problemListReadRequestSchema),
   readProblemListHandler
 );

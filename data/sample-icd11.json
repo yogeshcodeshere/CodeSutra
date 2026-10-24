@@ -3,7 +3,7 @@
     "entityId": "tm2-jwara",
     "code": "TM2-001",
     "title": "Fever disorder pattern",
-    "definition": "Traditional medicine disorder pattern associated with fever.",
+    "definition": "Traditional medicine disorder pattern characterized by acute or chronic febrile reaction.",
     "chapter": "tm2",
     "parentId": "chapter-26",
     "uri": "https://id.who.int/icd/entity/tm2-jwara"
@@ -12,7 +12,7 @@
     "entityId": "tm2-prameha",
     "code": "TM2-002",
     "title": "Urinary and metabolic disorder pattern",
-    "definition": "Traditional medicine disorder pattern associated with urinary and metabolic symptoms.",
+    "definition": "Traditional medicine disorder pattern associated with urinary frequency and metabolic derangement.",
     "chapter": "tm2",
     "parentId": "chapter-26",
     "uri": "https://id.who.int/icd/entity/tm2-prameha"
@@ -21,19 +21,874 @@
     "entityId": "tm2-kasa",
     "code": "TM2-003",
     "title": "Cough disorder pattern",
-    "definition": "Traditional medicine disorder pattern associated with cough.",
+    "definition": "Traditional medicine disorder pattern associated with cough and upper airway irritation.",
     "chapter": "tm2",
     "parentId": "chapter-26",
     "uri": "https://id.who.int/icd/entity/tm2-kasa"
   },
   {
+    "entityId": "tm2-shwasa",
+    "code": "TM2-005",
+    "title": "Dyspnea and breathing disorder pattern",
+    "definition": "Traditional medicine disorder pattern characterized by difficulty in breathing and wheezing.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shwasa"
+  },
+  {
+    "entityId": "tm2-amavata",
+    "code": "TM2-006",
+    "title": "Joint disorder with toxic accumulation pattern",
+    "definition": "Traditional medicine disorder pattern involving systemic inflammatory polyarthritis.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-amavata"
+  },
+  {
+    "entityId": "tm2-sandhivata",
+    "code": "TM2-007",
+    "title": "Joint degenerative disorder pattern",
+    "definition": "Traditional medicine pattern of degenerative joint wear, stiffness, and pain.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-sandhivata"
+  },
+  {
+    "entityId": "tm2-kamala",
+    "code": "TM2-008",
+    "title": "Icterus and hepatic disorder pattern",
+    "definition": "Traditional medicine pattern marked by bile stagnation and yellow tissue discoloration.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kamala"
+  },
+  {
+    "entityId": "tm2-atisara",
+    "code": "TM2-009",
+    "title": "Acute loose stool disorder pattern",
+    "definition": "Traditional medicine disorder pattern characterized by frequent loose liquid evacuations.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-atisara"
+  },
+  {
+    "entityId": "tm2-grahani",
+    "code": "TM2-010",
+    "title": "Digestive impairment and malabsorption pattern",
+    "definition": "Traditional medicine disorder pattern involving weak digestive fire and bowel dysmotility.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-grahani"
+  },
+  {
+    "entityId": "tm2-arshas",
+    "code": "TM2-011",
+    "title": "Anorectal vascular disorder pattern",
+    "definition": "Traditional medicine pattern of dilated hemorrhoidal veins in the anal canal.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-arshas"
+  },
+  {
+    "entityId": "tm2-bhagandara",
+    "code": "TM2-012",
+    "title": "Perianal fistula pattern",
+    "definition": "Traditional medicine disorder pattern involving discharging perianal fistulous tracts.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-bhagandara"
+  },
+  {
+    "entityId": "tm2-medoroga",
+    "code": "TM2-013",
+    "title": "Excess adipose tissue pattern",
+    "definition": "Traditional medicine disorder pattern involving abnormal lipid deposition and metabolic slowing.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-medoroga"
+  },
+  {
+    "entityId": "tm2-hridroga",
+    "code": "TM2-014",
+    "title": "Cardiac distress pattern",
+    "definition": "Traditional medicine disorder pattern characterized by precordial discomfort and rhythm changes.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-hridroga"
+  },
+  {
+    "entityId": "tm2-shiroroga",
+    "code": "TM2-015",
+    "title": "Cranial pain pattern",
+    "definition": "Traditional medicine disorder pattern characterized by persistent or throbbing headache.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shiroroga"
+  },
+  {
+    "entityId": "tm2-gridhrasi",
+    "code": "TM2-016",
+    "title": "Lumbosacral radiating pain pattern",
+    "definition": "Traditional medicine disorder pattern characterized by severe shooting pain along the sciatic nerve.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-gridhrasi"
+  },
+  {
+    "entityId": "tm2-kushta",
+    "code": "TM2-017",
+    "title": "Chronic dermatological pattern",
+    "definition": "Traditional medicine disorder pattern of stubborn, disfiguring chronic skin lesions.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kushta"
+  },
+  {
+    "entityId": "tm2-kitibha",
+    "code": "TM2-018",
+    "title": "Squamous skin eruption pattern",
+    "definition": "Traditional medicine pattern characterized by dry, silvery, pruritic scaly plaques.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kitibha"
+  },
+  {
+    "entityId": "tm2-shvitra",
+    "code": "TM2-019",
+    "title": "Hypopigmentation pattern",
+    "definition": "Traditional medicine pattern of localized or generalized loss of cutaneous melanin pigment.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shvitra"
+  },
+  {
+    "entityId": "tm2-udara-roga",
+    "code": "TM2-020",
+    "title": "Peritoneal fluid distension pattern",
+    "definition": "Traditional medicine pattern characterized by abdominal distension and fluid accumulation.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-udara-roga"
+  },
+  {
+    "entityId": "tm2-rajayakshma",
+    "code": "TM2-021",
+    "title": "Systemic consumptive wasting pattern",
+    "definition": "Traditional medicine disorder pattern characterized by multi-system exhaustion and chronic cachexia.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-rajayakshma"
+  },
+  {
+    "entityId": "tm2-unmada",
+    "code": "TM2-022",
+    "title": "Affective and cognitive disturbance pattern",
+    "definition": "Traditional medicine mental disorder pattern characterized by agitation and thought disorder.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-unmada"
+  },
+  {
+    "entityId": "tm2-apasmara",
+    "code": "TM2-023",
+    "title": "Paroxysmal convulsive disorder pattern",
+    "definition": "Traditional medicine pattern characterized by sudden seizures and transient loss of awareness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-apasmara"
+  },
+  {
+    "entityId": "tm2-vatarakta",
+    "code": "TM2-024",
+    "title": "Metabolic articular inflammation pattern",
+    "definition": "Traditional medicine pattern of acute peripheral joint inflammation associated with blood humor.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-vatarakta"
+  },
+  {
+    "entityId": "tm2-pakshaghata",
+    "code": "TM2-025",
+    "title": "Unilateral motor deficit pattern",
+    "definition": "Traditional medicine pattern of unilateral loss of motor function and voluntary movement.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-pakshaghata"
+  },
+  {
+    "entityId": "tm2-ardita",
+    "code": "TM2-026",
+    "title": "Facial nerve dysfunction pattern",
+    "definition": "Traditional medicine pattern of acute facial motor distortion and hemifacial weakness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-ardita"
+  },
+  {
+    "entityId": "tm2-manyastambha",
+    "code": "TM2-027",
+    "title": "Cervical rigidity and pain pattern",
+    "definition": "Traditional medicine pattern of cervical spine stiffness and paravertebral spasm.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-manyastambha"
+  },
+  {
+    "entityId": "tm2-katishoola",
+    "code": "TM2-028",
+    "title": "Lumbosacral musculoskeletal pain pattern",
+    "definition": "Traditional medicine pattern of pain localized to the lumbar and sacral regions.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-katishoola"
+  },
+  {
+    "entityId": "tm2-janushoola",
+    "code": "TM2-029",
+    "title": "Knee joint pain and stiffness pattern",
+    "definition": "Traditional medicine pattern of localized articular distress in the knee joint.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-janushoola"
+  },
+  {
+    "entityId": "tm2-amlapitta",
+    "code": "TM2-030",
+    "title": "Acid reflux and gastric pyrosis pattern",
+    "definition": "Traditional medicine pattern of burning retrosternal discomfort and acid regurgitation.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-amlapitta"
+  },
+  {
+    "entityId": "tm2-agnimandya",
+    "code": "TM2-031",
+    "title": "Gastric hypofunction and indigestion pattern",
+    "definition": "Traditional medicine pattern characterized by inability to digest food adequately.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-agnimandya"
+  },
+  {
+    "entityId": "tm2-chhardi",
+    "code": "TM2-032",
+    "title": "Upper gastrointestinal expulsive pattern",
+    "definition": "Traditional medicine pattern characterized by involuntary antiperistaltic ejection.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-chhardi"
+  },
+  {
+    "entityId": "tm2-trishna",
+    "code": "TM2-033",
+    "title": "Excessive thirst and dry mouth pattern",
+    "definition": "Traditional medicine pattern characterized by persistent dry mucous membranes and craving for water.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-trishna"
+  },
+  {
+    "entityId": "tm2-murchha",
+    "code": "TM2-034",
+    "title": "Transient cerebral hypoperfusion pattern",
+    "definition": "Traditional medicine pattern of sudden brief blackout and posture loss.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-murchha"
+  },
+  {
+    "entityId": "tm2-sthaulya",
+    "code": "TM2-035",
+    "title": "Generalized body heaviness and fat deposition pattern",
+    "definition": "Traditional medicine pattern of generalized corpulence and decreased stamina.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-sthaulya"
+  },
+  {
+    "entityId": "tm2-karshya",
+    "code": "TM2-036",
+    "title": "Generalized tissue depletion pattern",
+    "definition": "Traditional medicine pattern characterized by severe loss of body mass and subcutaneous fat.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-karshya"
+  },
+  {
+    "entityId": "tm2-pandu",
+    "code": "TM2-037",
+    "title": "Pallor and blood depletion pattern",
+    "definition": "Traditional medicine pattern characterized by pale complexion and lack of vitality.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-pandu"
+  },
+  {
+    "entityId": "tm2-raktapitta",
+    "code": "TM2-038",
+    "title": "Hemorrhagic extravasation pattern",
+    "definition": "Traditional medicine pattern involving spontaneous hemorrhage from upper or lower bodily orifices.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-raktapitta"
+  },
+  {
+    "entityId": "tm2-hikka",
+    "code": "TM2-039",
+    "title": "Diaphragmatic spasm pattern",
+    "definition": "Traditional medicine pattern of recurring sudden spasmodic diaphragmatic contraction.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-hikka"
+  },
+  {
+    "entityId": "tm2-pratishyaya",
+    "code": "TM2-040",
+    "title": "Nasal discharge and congestion pattern",
+    "definition": "Traditional medicine pattern characterized by rhinorrhea, sneezing, and nasal obstruction.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-pratishyaya"
+  },
+  {
+    "entityId": "tm2-pinasa",
+    "code": "TM2-041",
+    "title": "Chronic sinonasal inflammatory pattern",
+    "definition": "Traditional medicine pattern of persistent purulent sinus discharge and headache.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-pinasa"
+  },
+  {
+    "entityId": "tm2-galaganda",
+    "code": "TM2-042",
+    "title": "Anterior cervical enlargement pattern",
+    "definition": "Traditional medicine pattern of localized thyroid gland hypertrophy.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-galaganda"
+  },
+  {
+    "entityId": "tm2-gandamala",
+    "code": "TM2-043",
+    "title": "Cervical lymphadenopathy pattern",
+    "definition": "Traditional medicine pattern characterized by multiple beaded neck lymph node swellings.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-gandamala"
+  },
+  {
+    "entityId": "tm2-shleepada",
+    "code": "TM2-044",
+    "title": "Chronic peripheral lymphatic edema pattern",
+    "definition": "Traditional medicine pattern characterized by hard brawny elephantine swelling of the leg.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shleepada"
+  },
+  {
+    "entityId": "tm2-vidradhi",
+    "code": "TM2-045",
+    "title": "Localized suppurative swelling pattern",
+    "definition": "Traditional medicine pattern of acute purulent tissue collection.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-vidradhi"
+  },
+  {
+    "entityId": "tm2-vrana",
+    "code": "TM2-046",
+    "title": "Cutaneous tissue ulceration pattern",
+    "definition": "Traditional medicine pattern of breach in skin integrity and impaired healing.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-vrana"
+  },
+  {
+    "entityId": "tm2-nadi-vrana",
+    "code": "TM2-047",
+    "title": "Discharging sinus tract pattern",
+    "definition": "Traditional medicine pattern of chronic narrow epithelialized tract with discharge.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-nadi-vrana"
+  },
+  {
+    "entityId": "tm2-upadansha",
+    "code": "TM2-048",
+    "title": "Genital ulcerative inflammatory pattern",
+    "definition": "Traditional medicine pattern of sexually acquired ulcerative genital lesions.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-upadansha"
+  },
+  {
+    "entityId": "tm2-klaibya",
+    "code": "TM2-049",
+    "title": "Male reproductive hypofunction pattern",
+    "definition": "Traditional medicine pattern of inability to achieve or maintain penile erection.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-klaibya"
+  },
+  {
+    "entityId": "tm2-shukragata-vata",
+    "code": "TM2-050",
+    "title": "Ejaculatory urgency pattern",
+    "definition": "Traditional medicine pattern of uncontrolled rapid seminal emission.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shukragata-vata"
+  },
+  {
+    "entityId": "tm2-yonivyapad",
+    "code": "TM2-051",
+    "title": "Female reproductive tract imbalance pattern",
+    "definition": "Traditional medicine pattern of pain, discharge, and irregular pelvic symptoms in women.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-yonivyapad"
+  },
+  {
+    "entityId": "tm2-asrigdara",
+    "code": "TM2-052",
+    "title": "Excessive uterine bleeding pattern",
+    "definition": "Traditional medicine pattern characterized by prolonged heavy menstrual blood loss.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-asrigdara"
+  },
+  {
+    "entityId": "tm2-kashtartava",
+    "code": "TM2-053",
+    "title": "Painful menstrual cramping pattern",
+    "definition": "Traditional medicine pattern of cyclic pelvic pain preceding or accompanying menses.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kashtartava"
+  },
+  {
+    "entityId": "tm2-artavavriddhi",
+    "code": "TM2-054",
+    "title": "Ovarian follicular dysregulation pattern",
+    "definition": "Traditional medicine pattern of irregular cycles, hirsutism, and multiple follicular cysts.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-artavavriddhi"
+  },
+  {
+    "entityId": "tm2-sutika-roga",
+    "code": "TM2-055",
+    "title": "Postpartum convalescent complication pattern",
+    "definition": "Traditional medicine pattern of fever, abdominal ache, and debility following delivery.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-sutika-roga"
+  },
+  {
+    "entityId": "tm2-balagraha",
+    "code": "TM2-056",
+    "title": "Pediatric sudden neuro-behavioral pattern",
+    "definition": "Traditional medicine pattern characterized by acute childhood behavioral distress and convulsions.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-balagraha"
+  },
+  {
+    "entityId": "tm2-phakka-roga",
+    "code": "TM2-057",
+    "title": "Infantile physical wasting and delayed motor milestone pattern",
+    "definition": "Traditional medicine pattern characterized by muscular wasting and skeletal softening in infants.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-phakka-roga"
+  },
+  {
+    "entityId": "tm2-parikartika",
+    "code": "TM2-058",
+    "title": "Acute anal sphincter laceration pattern",
+    "definition": "Traditional medicine pattern characterized by severe knife-like pain in the anal verge during stool.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-parikartika"
+  },
+  {
+    "entityId": "tm2-ashmari",
+    "code": "TM2-059",
+    "title": "Urinary calculus formation pattern",
+    "definition": "Traditional medicine pattern characterized by solid crystalline concretions in urinary tract.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-ashmari"
+  },
+  {
+    "entityId": "tm2-mutrakrichhra",
+    "code": "TM2-060",
+    "title": "Difficult and burning urination pattern",
+    "definition": "Traditional medicine pattern of burning pain and difficulty in voiding urine.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-mutrakrichhra"
+  },
+  {
+    "entityId": "tm2-mutraghata",
+    "code": "TM2-061",
+    "title": "Urinary outflow obstruction pattern",
+    "definition": "Traditional medicine pattern of low flow rate, hesitancy, and acute urinary retention.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-mutraghata"
+  },
+  {
     "entityId": "tm2-azhal-noi",
     "code": "TM2-004",
     "title": "Heat-related traditional disorder pattern",
-    "definition": "Traditional medicine heat-related disorder pattern.",
+    "definition": "Traditional medicine heat-related disorder pattern characterized by hyperthermia and burning sensations.",
     "chapter": "tm2",
     "parentId": "chapter-26",
     "uri": "https://id.who.int/icd/entity/tm2-azhal-noi"
+  },
+  {
+    "entityId": "tm2-vali-noi",
+    "code": "TM2-062",
+    "title": "Vata wind-predominant systemic neural pattern",
+    "definition": "Traditional medicine pattern of nerve pain, tremor, numbness, and motor instability.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-vali-noi"
+  },
+  {
+    "entityId": "tm2-aiya-noi",
+    "code": "TM2-063",
+    "title": "Phlegm-congestive respiratory pattern",
+    "definition": "Traditional medicine pattern characterized by excess mucus secretion and coldness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-aiya-noi"
+  },
+  {
+    "entityId": "tm2-gunmam",
+    "code": "TM2-064",
+    "title": "Spasmodic gastrointestinal colic pattern",
+    "definition": "Traditional medicine pattern of localized abdominal gnawing pain and spasmodic colic.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-gunmam"
+  },
+  {
+    "entityId": "tm2-sobai",
+    "code": "TM2-065",
+    "title": "Fluid retention and generalized edema pattern",
+    "definition": "Traditional medicine pattern characterized by dependent swelling of face, abdomen, and extremities.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-sobai"
+  },
+  {
+    "entityId": "tm2-eruvai-mulai",
+    "code": "TM2-066",
+    "title": "Venous anal engorgement pattern",
+    "definition": "Traditional medicine pattern of vascular prolapse at the lower anorectal verge.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-eruvai-mulai"
+  },
+  {
+    "entityId": "tm2-meganoigal",
+    "code": "TM2-067",
+    "title": "Constitutional metabolic clouding pattern",
+    "definition": "Traditional medicine pattern of chronic metabolic and genitourinary systemic decline.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-meganoigal"
+  },
+  {
+    "entityId": "tm2-venpadai",
+    "code": "TM2-068",
+    "title": "Depigmented epidermal patch pattern",
+    "definition": "Traditional medicine pattern characterized by chalky white cutaneous macules.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-venpadai"
+  },
+  {
+    "entityId": "tm2-karappan",
+    "code": "TM2-069",
+    "title": "Allergic pruritic dermatitis pattern",
+    "definition": "Traditional medicine pattern of eczematous erythematous vesicular skin eruption.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-karappan"
+  },
+  {
+    "entityId": "tm2-puzhuvettu",
+    "code": "TM2-070",
+    "title": "Circumscribed patchy alopecia pattern",
+    "definition": "Traditional medicine pattern of rapid focal loss of scalp or beard hair without scarring.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-puzhuvettu"
+  },
+  {
+    "entityId": "tm2-kaalanjagapadai",
+    "code": "TM2-071",
+    "title": "Exfoliative erythematous plaque pattern",
+    "definition": "Traditional medicine pattern of hyperkeratotic silvery cutaneous plaques.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kaalanjagapadai"
+  },
+  {
+    "entityId": "tm2-vali-keel-vayu",
+    "code": "TM2-072",
+    "title": "Lower extremity migratory joint pain pattern",
+    "definition": "Traditional medicine pattern of stiffness and crepitus in major weight-bearing joints.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-vali-keel-vayu"
+  },
+  {
+    "entityId": "tm2-azhal-keel-vayu",
+    "code": "TM2-073",
+    "title": "Erythematous hot joint inflammation pattern",
+    "definition": "Traditional medicine pattern characterized by acute burning articular redness and extreme tenderness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-azhal-keel-vayu"
+  },
+  {
+    "entityId": "tm2-siruneeraga-kal",
+    "code": "TM2-074",
+    "title": "Siddha nephrolithiasis crystal syndrome",
+    "definition": "Traditional medicine pattern of urinary sediment compaction causing renal colic.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-siruneeraga-kal"
+  },
+  {
+    "entityId": "tm2-mudakku-vatham",
+    "code": "TM2-075",
+    "title": "Chronic deformative axial arthropathy pattern",
+    "definition": "Traditional medicine pattern of progressive articular fusion and crippling limb deformity.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-mudakku-vatham"
+  },
+  {
+    "entityId": "tm2-neerizhivu",
+    "code": "TM2-076",
+    "title": "Polyuric sweet-urine constitutional pattern",
+    "definition": "Traditional medicine pattern of chronic glycosuria, polydipsia, and weakness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-neerizhivu"
+  },
+  {
+    "entityId": "tm2-manjal-noi",
+    "code": "TM2-077",
+    "title": "Scleral and cutaneous icteric syndrome pattern",
+    "definition": "Traditional medicine pattern of yellow bile accumulation and digestive weakness.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-manjal-noi"
+  },
+  {
+    "entityId": "tm2-kalleeral-noi",
+    "code": "TM2-078",
+    "title": "Right hypochondrial hepatic congestion pattern",
+    "definition": "Traditional medicine pattern characterized by liver enlargement and metabolic impairment.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-kalleeral-noi"
+  },
+  {
+    "entityId": "tm2-thandaga-vatham",
+    "code": "TM2-079",
+    "title": "Spinal cord flaccid or spastic motor pattern",
+    "definition": "Traditional medicine pattern of bilateral lower limb sensory-motor loss.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-thandaga-vatham"
+  },
+  {
+    "entityId": "tm2-pakka-vatham",
+    "code": "TM2-080",
+    "title": "Unilateral facial and limb paresis pattern",
+    "definition": "Traditional medicine pattern of acute vascular hemiparesis.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-pakka-vatham"
+  },
+  {
+    "entityId": "tm2-ziabetus",
+    "code": "TM2-081",
+    "title": "Metabolic sugar urinary excretion pattern",
+    "definition": "Traditional medicine pattern of impaired renal retention and systemic saccharine urine.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-ziabetus"
+  },
+  {
+    "entityId": "tm2-waja-ul-mafasil",
+    "code": "TM2-082",
+    "title": "Articular humors imbalance pain pattern",
+    "definition": "Traditional medicine pattern of stiffness, warmth, and aching in synovial articulations.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-waja-ul-mafasil"
+  },
+  {
+    "entityId": "tm2-niqras",
+    "code": "TM2-083",
+    "title": "Peripheral distal joint uric inflammatory pattern",
+    "definition": "Traditional medicine pattern of acute localized crystalline inflammation in peripheral joints.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-niqras"
+  },
+  {
+    "entityId": "tm2-irq-un-nasa",
+    "code": "TM2-084",
+    "title": "Sciatic nerve pathway humors stagnation pattern",
+    "definition": "Traditional medicine pattern of continuous or episodic neuralgic pain along sciatic distribution.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-irq-un-nasa"
+  },
+  {
+    "entityId": "tm2-falij",
+    "code": "TM2-085",
+    "title": "Half-body paralysis humoral blockage pattern",
+    "definition": "Traditional medicine pattern of longitudinal half-body motor and sensory failure.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-falij"
+  },
+  {
+    "entityId": "tm2-laqwa",
+    "code": "TM2-086",
+    "title": "Unilateral facial distortion pattern",
+    "definition": "Traditional medicine pattern of sudden hemifacial paresis and angle of mouth droop.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-laqwa"
+  },
+  {
+    "entityId": "tm2-sara",
+    "code": "TM2-087",
+    "title": "Cerebral episodic spastic convulsion pattern",
+    "definition": "Traditional medicine pattern of sudden brain dysfunction causing seizure activity.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-sara"
+  },
+  {
+    "entityId": "tm2-suda",
+    "code": "TM2-088",
+    "title": "Intracranial vaporous tension headache pattern",
+    "definition": "Traditional medicine pattern characterized by generalized cranial fullness and ache.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-suda"
+  },
+  {
+    "entityId": "tm2-shaqiqa",
+    "code": "TM2-089",
+    "title": "Paroxysmal unilateral hemicranial headache pattern",
+    "definition": "Traditional medicine pattern of recurrent one-sided throbbing cranial pain.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-shaqiqa"
+  },
+  {
+    "entityId": "tm2-zeequn-nafas",
+    "code": "TM2-090",
+    "title": "Bronchial constriction phlegmatic dyspnea pattern",
+    "definition": "Traditional medicine pattern of paroxysmal airway narrowing and nocturnal wheeze.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-zeequn-nafas"
+  },
+  {
+    "entityId": "tm2-nazla-o-zukam",
+    "code": "TM2-091",
+    "title": "Acute descending pharyngeal catarrh pattern",
+    "definition": "Traditional medicine pattern of upper airway mucosal congestion and discharge.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-nazla-o-zukam"
+  },
+  {
+    "entityId": "tm2-su-e-hazm",
+    "code": "TM2-092",
+    "title": "Gastric concoction impairment pattern",
+    "definition": "Traditional medicine pattern characterized by epigastric fullness and acid fermentation.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-su-e-hazm"
+  },
+  {
+    "entityId": "tm2-ishal",
+    "code": "TM2-093",
+    "title": "Intestinal expulsive watery flux pattern",
+    "definition": "Traditional medicine pattern of rapid intestinal transit and liquid evacuation.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-ishal"
+  },
+  {
+    "entityId": "tm2-qulanj",
+    "code": "TM2-094",
+    "title": "Spasmodic colonic cramping pattern",
+    "definition": "Traditional medicine pattern of sudden severe spasmodic intestinal colic.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-qulanj"
+  },
+  {
+    "entityId": "tm2-yarqan",
+    "code": "TM2-095",
+    "title": "Bilious cutaneous discoloration pattern",
+    "definition": "Traditional medicine pattern characterized by bilious pigmentation of tissues.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-yarqan"
+  },
+  {
+    "entityId": "tm2-bawaseer",
+    "code": "TM2-096",
+    "title": "Rectal vein varicosity pattern",
+    "definition": "Traditional medicine pattern of inflamed engorged anal venous nodules.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-bawaseer"
+  },
+  {
+    "entityId": "tm2-hasat-e-kulyah",
+    "code": "TM2-097",
+    "title": "Sedimentary renal stone formation pattern",
+    "definition": "Traditional medicine pattern of mineral and phlegmatic calculus deposition in renal parenchyma.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-hasat-e-kulyah"
+  },
+  {
+    "entityId": "tm2-juzam",
+    "code": "TM2-098",
+    "title": "Severe chronic cutaneous and neurological pattern",
+    "definition": "Traditional medicine pattern characterized by sensory blunting, thickening of skin, and chronic ulcerations.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-juzam"
+  },
+  {
+    "entityId": "tm2-bars",
+    "code": "TM2-099",
+    "title": "Localized phlegmatic skin depigmentation pattern",
+    "definition": "Traditional medicine pattern characterized by circumscribed white depigmented macules.",
+    "chapter": "tm2",
+    "parentId": "chapter-26",
+    "uri": "https://id.who.int/icd/entity/tm2-bars"
   },
   {
     "entityId": "icd-diabetes",
@@ -52,5 +907,32 @@
     "chapter": "biomedicine",
     "parentId": "chapter-11",
     "uri": "https://id.who.int/icd/entity/icd-hypertension"
+  },
+  {
+    "entityId": "icd-asthma",
+    "code": "CA23",
+    "title": "Asthma",
+    "definition": "Chronic inflammatory disorder of the airways.",
+    "chapter": "biomedicine",
+    "parentId": "chapter-12",
+    "uri": "https://id.who.int/icd/entity/icd-asthma"
+  },
+  {
+    "entityId": "icd-osteoarthritis",
+    "code": "FA00",
+    "title": "Osteoarthritis of knee",
+    "definition": "Degenerative joint disease of the knee.",
+    "chapter": "biomedicine",
+    "parentId": "chapter-15",
+    "uri": "https://id.who.int/icd/entity/icd-osteoarthritis"
+  },
+  {
+    "entityId": "icd-gerd",
+    "code": "DA22",
+    "title": "Gastro-oesophageal reflux disease",
+    "definition": "Condition which develops when the reflux of stomach contents causes troublesome symptoms.",
+    "chapter": "biomedicine",
+    "parentId": "chapter-13",
+    "uri": "https://id.who.int/icd/entity/icd-gerd"
   }
 ]

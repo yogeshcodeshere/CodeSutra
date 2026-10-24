@@ -55,9 +55,8 @@ SNOMED CT and LOINC are not currently emitted. If added later, use `http://snome
 Roles are documented in `src/lib/rbac.js`:
 
 - `CLINICIAN`: terminology read and Problem List write
-- `CODER`: terminology read and Problem List read
 - `PATIENT`: own Problem List read
-- `ADMIN`: administrative sync and full platform operations
+- `ADMIN`: administrative sync, user/role management, mappings management, and full platform operations
 
 ## Audit Trail
 

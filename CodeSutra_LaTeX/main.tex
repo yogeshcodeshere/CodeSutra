@@ -1,0 +1,695 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{array,tabularx,longtable,booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{caption}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlist{nosep,leftmargin=1.5em}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\hypersetup{colorlinks=false,pdfauthor={Yogesh Tanwar, Anusha Shetty, Pranav Patil},pdftitle={CodeSutra: FHIR-Based Dual Coding for Traditional Medicine}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\begin{center}\textbf{CodeSutra: FHIR-Based Dual Coding for Traditional Medicine}\end{center}
+\begin{center}Submitted in partial fulfillment of the requirements of the degree\end{center}
+\begin{center}\textbf{BACHELOR OF ENGINEERING}\end{center}
+\begin{center}IN\end{center}
+\begin{center}\textbf{COMPUTER ENGINEERING}\end{center}
+\begin{center}\textbf{By}\end{center}
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Yogesh Tanwar} & \textbf{124A1168} \\ \hline
+\endfirsthead
+\hline \textbf{Yogesh Tanwar} & \textbf{124A1168} \\ \hline\endhead
+Anusha Shetty & 124A1152 \\ \hline
+Pranav Patil & 123A1093 \\ \hline
+\end{longtable}
+\vspace{4pt}
+\begin{center}Supervisor\end{center}
+\begin{center}\textbf{Prof. Arnika Phatak}\end{center}
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-1.png}\end{center}
+\begin{center}\textbf{Department of Computer Engineering}\end{center}
+\begin{center}\textbf{SIES Graduate School of Technology (Autonomous)}\end{center}
+\begin{center}Affiliated to University of Mumbai\end{center}
+\begin{center}\textbf{Nerul, Navi Mumbai -- 400706}\end{center}
+\begin{center}\textbf{A.Y. 2026--27}\end{center}
+\begin{center}\textbf{CERTIFICATE}\end{center}
+This is to certify that the project entitled ``\textbf{CodeSutra}\textbf{: FHIR-Based Dual Coding for Traditional Medicine}'' is a bonafide work of the following students, submitted to the SIES Graduate School of Technology in partial fulfillment of the requirement for the award of the degree of \textbf{Bachelor of Engineering in Computer Engineering.}
+
+\begin{center}Yogesh Tanwar	124A1168	\end{center}
+\begin{center}Anusha Shetty	124A1152	\end{center}
+\begin{center}Pranav Patil	123A1093	\end{center}
+Prof. Arnika Phatak	Prof. Sunil K Punjabi
+
+\textbf{     Supervisor}\textbf{	Mini}\textbf{ }\textbf{Project}\textbf{ }\textbf{Coordinator}
+
+    Dr. Aparna Bannore	Dr. K. Lakshmisudha
+
+\textbf{    Head}\textbf{ }\textbf{of}\textbf{ }\textbf{Department}\textbf{	}\textbf{Principal}
+
+\begin{center}\textbf{PROJECT}\textbf{ }\textbf{REPORT}\textbf{ }\textbf{APPROVAL}\end{center}
+This Mini Project entitled ``\textbf{CodeSutra}\textbf{: FHIR-Based Dual Coding for Traditional Medicine}'' by the following students is approved for the degree of Bachelor of Engineering in Computer Engineering.
+
+\begin{center}\textbf{Yogesh Tanwar}\textbf{	124A1168}\textbf{	}\end{center}
+\begin{center}\textbf{Anusha Shetty}\textbf{	124A1152}\textbf{	}\end{center}
+\begin{center}\textbf{Pranav Patil}\textbf{	123A1093}\textbf{	}\end{center}
+\begin{center}\textbf{Examiners}\end{center}
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+(Internal Examiner Name \& Sign)
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+(External Examiner Name \& Sign)
+
+Date:
+
+Place: SIES GST, Nerul, Navi Mumbai.
+
+\begin{center}\textbf{ACKNOWLEDGEMENT}\end{center}
+We would like to express our thanks to the people who have helped us the most throughout our project. We are grateful to our guide Prof. Arnika and coordinator, Prof. Sunil K Punjabi for nonstop support for the project.
+
+A special thanks goes to each other who worked together as a team in completing the project, where we all exchanged our own interesting ideas and thoughts and made it possible to complete our project with all accurate information. We also wish to thank our parents for their personal support and attention, who inspired us to go our own way.
+
+We would also like to extend our sincere gratitude to our Principal, Dr. K. Lakshmisudha, and our Head of the Department, Dr. Aparna Bannore, for their continuous support and encouragement.
+
+We would also like to thank our other faculty members for providing us with all the required resources and references for the project.
+
+Project Team
+
+Yogesh Tanwar
+
+Anusha Shetty
+
+Pranav Patil
+
+\clearpage
+\begin{center}\textbf{ABSTRACT}\end{center}
+CodeSutra addresses the interoperability gap between Indian traditional medicine vocabularies and modern electronic health records. It provides an HL7 FHIR R4 terminology service that maps NAMASTE diagnostic concepts for Ayurveda, Siddha and Unani to WHO ICD-11 Traditional Medicine Module 2 (TM2) and biomedical concepts. The platform combines terminology search and translation with a versioned clinical problem list, role-based access control and audit logging.
+
+The supplied project specification describes a Node.js and Express API, PostgreSQL persistence through Prisma ORM, and a Next.js administrative interface. FHIR terminology operations support concept expansion, lookup and translation; submitted clinical records are represented using Condition resources in FHIR Bundles. The design includes clinician, patient and administrator roles and records provenance for mapping and access activity.
+
+The project material reports evaluation using more than 100 NAMASTE concepts and 104 ICD-11 entities, with 100\% FHIR R4 structural compliance, terminology lookups below 50 ms, and 12 suites comprising 48 passing tests. These figures are reported project results. The system is intended as an extensible academic prototype, with future work including live ABDM integration and broader terminology coverage.
+
+Keywords: Health Informatics, HL7 FHIR R4, NAMASTE, WHO ICD-11 TM2, Dual Coding, Terminology Server, ABDM, Role-Based Access Control
+
+\begin{center}\textbf{CONTENTS}\end{center}
+\textbf{ACKNOWLEDGEMENT}	iii
+
+\textbf{ABSTRACT}	1
+
+\textbf{List of Figures}	4
+
+\textbf{List of Tables}	5
+
+\textbf{List of Abbreviations}	6
+
+\textbf{Chapter 1  Introduction}	7
+
+1.1 Overview	7
+
+1.2 Motivation	7
+
+1.3 Problem Statement and Objectives	7
+
+1.3.1 Problem Statement	7
+
+1.3.2 Objectives	7
+
+1.4 Scope	8
+
+1.5 Organization of the Report	8
+
+\textbf{Chapter 2  Literature Survey}	10
+
+2.1 Survey of Existing Systems and Standards	10
+
+2.1.4 Comparative Analysis	11
+
+2.2 Limitations and Research Gap	11
+
+\textbf{Chapter 3  Proposed System}	12
+
+3.1 System Overview	12
+
+3.2 Components of the System	12
+
+3.3 Architecture and Framework	13
+
+3.4 Algorithm and Process Design	13
+
+3.5 Details of Hardware and Software	14
+
+\textbf{Chapter 4  Design and Methodology}	15
+
+4.1 Design Details	15
+
+4.1.1 Entity-Relationship Model	15
+
+4.1.1.1 Key Entities and Attributes	15
+
+4.1.1.2 Relationships Between Entities	16
+
+4.1.1.3 Design Advantages	16
+
+4.1.2 UML Activity Diagram	16
+
+4.1.2.1 Activity Flow	17
+
+4.1.2.2 Features of the Activity Design	17
+
+4.1.3 Data Flow Diagram (DFD) - Level 1	18
+
+4.1.3.1 External Entities	18
+
+4.1.3.2 Core Processes	18
+
+4.1.3.3 Data Stores	19
+
+4.1.3.4 External System: WHO ICD API	19
+
+4.1.3.5 Workflow Summary and Design Benefits	19
+
+4.2 Methodology	19
+
+4.3 Algorithm Implementation	19
+
+4.4 Details of Hardware and Software	20
+
+4.4.1 Hardware Requirements	20
+
+4.4.2 Software Requirements	20
+
+\textbf{Chapter 5  Results and Discussions}	21
+
+5.1 Implementation	21
+
+5.1.1 User Interface Overview	21
+
+5.1.2 Key Features	21
+
+5.1.3 Terminology Search and Translation	22
+
+5.1.4 WHO ICD-11 Synchronization	22
+
+5.1.5 Bundle Submission and Problem List	22
+
+5.2 Results and Test Coverage	23
+
+5.3 Discussion and Limitations	24
+
+\textbf{Chapter 6  Conclusion and Future Scope}	25
+
+\textbf{Bibliography}	27
+
+\textbf{Plagiarism Report}	28
+
+\textbf{Publication Details / Project Achievements}	29
+
+\textbf{Certificates}	30
+
+\begin{center}\textbf{List of Figures}\end{center}
+\begin{longtable}{|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|}
+\hline
+\textbf{Figure No.} & \textbf{Figure Caption} & \textbf{Page No.} \\ \hline
+\endfirsthead
+\hline \textbf{Figure No.} & \textbf{Figure Caption} & \textbf{Page No.} \\ \hline\endhead
+1.1 & CodeSutra implementation phase sequence & 9 \\ \hline
+3.1 & Logical architecture of CodeSutra & 13 \\ \hline
+4.1 & CodeSutra entity-relationship model & 15 \\ \hline
+4.2 & Clinical dual-coding activity flow & 17 \\ \hline
+4.3 & Level 1 data flow diagram & 18 \\ \hline
+5.1 & Frontend demonstration workflow & 21 \\ \hline
+\end{longtable}
+\vspace{4pt}
+\begin{center}\textbf{List of Tables}\end{center}
+\begin{longtable}{|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|}
+\hline
+\textbf{Table No.} & \textbf{Table Caption} & \textbf{Page No.} \\ \hline
+\endfirsthead
+\hline \textbf{Table No.} & \textbf{Table Caption} & \textbf{Page No.} \\ \hline\endhead
+1.1 & Project objectives & 8 \\ \hline
+2.1 & Comparison of terminology and interoperability systems & 11 \\ \hline
+4.1 & Core data entities and purposes & 16 \\ \hline
+4.2 & Software requirements & 20 \\ \hline
+5.1 & Current local demonstration corpus & 23 \\ \hline
+5.2 & Automated test coverage represented in the repository & 24 \\ \hline
+\end{longtable}
+\vspace{4pt}
+\begin{center}\textbf{List of Abbreviations}\end{center}
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Abbreviation} & \textbf{Full Form} \\ \hline
+\endfirsthead
+\hline \textbf{Abbreviation} & \textbf{Full Form} \\ \hline\endhead
+ABHA & Ayushman Bharat Health Account \\ \hline
+API & Application Programming Interface \\ \hline
+AYUSH & Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy \\ \hline
+FHIR & Fast Healthcare Interoperability Resources \\ \hline
+HTTP & Hypertext Transfer Protocol \\ \hline
+ICD-11 & International Classification of Diseases, Eleventh Revision \\ \hline
+JWT & JSON Web Token \\ \hline
+NAMASTE & National AYUSH Morbidity and Standardized Terminologies Electronic Portal \\ \hline
+OAuth & Open Authorization \\ \hline
+RBAC & Role-Based Access Control \\ \hline
+REST & Representational State Transfer \\ \hline
+TM2 & Traditional Medicine Module 2 \\ \hline
+UI & User Interface \\ \hline
+URI & Uniform Resource Identifier \\ \hline
+WHO & World Health Organization \\ \hline
+Zod & TypeScript-first schema validation library \\ \hline
+\end{longtable}
+\vspace{4pt}
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 1}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Introduction}}\end{center}\vspace{8pt}
+\section*{1.1 Overview}
+CodeSutra is a FHIR R4-based prototype that connects traditional medicine terminology with ICD-11 TM2 coding. It exposes a terminology API and a small browser demonstration through which an authenticated user can search codes, inspect a mapping, and record a condition. The system retains a NAMASTE code as the source clinical term and adds a TM2 code where a mapping exists. This is a dual-coded representation: one clinical concept can be represented in both its source terminology and a target classification without replacing the original term.
+
+The project is aligned with the interoperability problem represented by SIH challenge 25026 in the implementation plan. It uses the Ministry of Ayush NAMASTE portal and WHO ICD-11 API as terminology context, while HL7 FHIR resources provide the exchange structure. The application is a demonstration implementation, not a national health information exchange or a clinically certified coding service.
+
+\section*{1.2 Motivation}
+A traditional medicine record can lose meaning when it is converted directly into a general biomedical label. Conversely, a digital record that preserves only a local term may be difficult to compare or exchange with systems using internationally maintained classifications. A dual-coded record can preserve the original code and carry a related classification code alongside it. WHO describes ICD-11 traditional medicine coding as optional and intended for morbidity reporting and comparison; it does not endorse the scientific validity or effectiveness of a practice 
+
+The technical challenge is to preserve code-system identity, provide traceable mappings, validate records before storage, and apply access controls to clinical operations. CodeSutra explores these requirements using FHIR resources and a versioned Problem List while keeping live terminology synchronization and local sample data as separate operating modes.
+
+\section*{1.3 Problem Statement and Objectives}
+\subsection*{1.3.1 Problem Statement}
+Clinical terminology used in traditional medicine and international classifications may not share identifiers, labels, or coding workflows. This limits consistent search, exchange, and aggregation of traditional medicine diagnoses. A practical software bridge must expose clear system URIs, preserve the source terminology, maintain reviewed crosswalks, validate clinical submissions, and provide traceable storage. The project investigates how a FHIR R4 service can support this workflow without representing a demo mapping as a clinically approved equivalence.
+
+\subsection*{1.3.2 Objectives}
+1. Load NAMASTE terminology records from a source file and expose them as a FHIR CodeSystem.
+
+2. Retrieve ICD-11 TM2 and biomedicine terminology through a sample mode and a WHO ICD API v2 live-sync mode.
+
+3. Represent NAMASTE-to-TM2 mappings in a FHIR ConceptMap and support expand, lookup, and translate operations.
+
+4. Protect FHIR and administrative endpoints with JWT authentication, role checks, request validation, and access audit logging.
+
+5. Accept a FHIR transaction Bundle with a Condition and Consent resource, add a mapped TM2 code when available, and persist versioned Problem List entries.
+
+6. Provide a browser interface and containerized demo workflow for exploring the end-to-end implementation.
+
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Objective} & \textbf{Implementation Evidence} \\ \hline
+\endfirsthead
+\hline \textbf{Objective} & \textbf{Implementation Evidence} \\ \hline\endhead
+Terminology import & CSV ingestion and CodeSystem route \\ \hline
+ICD-11 sync & WHO client, sample sync, release and root traversal \\ \hline
+Terminology operations & \$expand, \$lookup, \$translate, ConceptMap \\ \hline
+Clinical write path & Bundle validation, mapping, versioned ProblemListEntry \\ \hline
+Security and audit & JWT, role middleware, AuditLog \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 1.1: Project objectives and implementation evidence}}\
+\section*{1.4 Scope}
+\begin{itemize}
+\item The prototype includes a Node.js and Express API, PostgreSQL and Prisma persistence, a Next.js demonstration frontend, FHIR-shaped JSON resources, and a Docker Compose development stack.
+\item Terminology support includes NAMASTE and ICD-11 TM2 and biomedicine CodeSystems, a NAMASTE-to-TM2 ConceptMap, and ValueSet expansion, code lookup, and translation operations.
+\item Clinical writes use a transaction Bundle with Condition and Consent entries. A successful mapped NAMASTE entry receives a TM2 code and is stored with a version number and current-history marker.
+\item The implementation does not provide real ABHA identity verification, a production-grade consent policy engine, clinical decision support, terminology curation governance, a full FHIR conformance server, or a production service-level evaluation.
+\item The current local terminology files are development/demo data. Live WHO synchronization is conditional on valid WHO ICD API credentials and must be evaluated against an authorized account and selected release.
+\end{itemize}
+\section*{1.5 Organization of the Report}
+Chapter 1 introduces the problem, motivation, objectives, and scope. Chapter 2 surveys the terminology sources and interoperability standards that shape the design. Chapter 3 describes the proposed system and its components. Chapter 4 presents the data model, workflows, and implementation methodology. Chapter 5 summarizes the implemented capabilities, local sample corpus, and repository test coverage, then discusses limitations. Chapter 6 concludes the report and identifies future work.
+
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-2.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 1.1: CodeSutra implementation phase sequence}}\end{center}
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 2}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Literature Survey}}\end{center}\vspace{8pt}
+CodeSutra draws on three complementary foundations: national terminology publication, international disease classification, and a resource-based health information exchange standard. The NAMASTE portal provides access to standardized AYUSH terminology and morbidity codes [4]. WHO ICD-11 provides a maintained classification and API; its traditional medicine chapter has an optional dual-coding role and a stated scope that differs from the broader range of Indian traditional medicine systems [2]. HL7 FHIR defines interoperable resource structures and exchange interactions, including Condition, Consent, Bundle, CodeSystem, ValueSet, and ConceptMap [3-7].
+
+\section*{2.1 Survey of Existing Systems and Standards}
+\subsection*{2.1.1 NAMASTE Terminology Portal}
+The National AYUSH Morbidity and Standardized Terminologies Electronic Portal is maintained by the Ministry of Ayush. The portal describes standardized terminology and morbidity codes and provides a data-entry module for morbidity statistics [4]. This establishes a national terminology source and supports structured reporting. CodeSutra's local CSV ingestion is a software demonstration of terminology loading; the included sample file is not represented as a synchronized official NAMASTE export.
+
+\subsection*{2.1.2 WHO ICD-11 and Traditional Medicine}
+The WHO ICD API exposes classification entities through a versioned REST interface. Its v2 documentation specifies API-Version v2, English language negotiation, JSON responses, and OAuth 2.0 client-credentials authentication using the icdapi\_access scope [1]. WHO notes that the traditional medicine chapter is used for optional dual coding in morbidity data collection and that Module I covers selected traditional medicine conditions; development of a Module II derived from Ayurveda and related systems has started [2]. CodeSutra models the TM2 namespace as its target and keeps the source NAMASTE coding in the Condition.
+
+\subsection*{2.1.3 HL7 FHIR Terminology and Clinical Resources}
+FHIR organizes healthcare information as focused resources that can be exchanged through defined interactions [3, 5]. CodeSystem identifies a code system, ValueSet represents a set or expansion of concepts, and ConceptMap represents mappings between code systems [6, 7]. Condition provides the clinical problem record, Consent represents a consumer's choices within a policy context, and Bundle groups resources for exchange or transaction processing [8-10]. The FHIR standard supplies interoperable structures; the implementation remains responsible for application-specific authorization, consent enforcement, and terminology governance [11].
+
+\subsection*{2.1.4 Comparative Analysis}
+\begin{longtable}{|p{\dimexpr\textwidth/4-2\tabcolsep\relax}|p{\dimexpr\textwidth/4-2\tabcolsep\relax}|p{\dimexpr\textwidth/4-2\tabcolsep\relax}|p{\dimexpr\textwidth/4-2\tabcolsep\relax}|}
+\hline
+\textbf{System / Standard} & \textbf{Primary Role} & \textbf{Strength} & \textbf{Gap Addressed by CodeSutra} \\ \hline
+\endfirsthead
+\hline \textbf{System / Standard} & \textbf{Primary Role} & \textbf{Strength} & \textbf{Gap Addressed by CodeSutra} \\ \hline\endhead
+NAMASTE Portal & AYUSH terms and morbidity codes & National terminology access and standardized data entry & API workflow for lookup, translation, and paired FHIR coding \\ \hline
+WHO ICD API v2 & ICD classification access & Versioned entity access and search & Local sync orchestration and TM2-oriented terminology operations \\ \hline
+HL7 FHIR R4 & Interoperable resource model and exchange & Common resource and operation structures & Project-specific NAMASTE / TM2 crosswalk and workflow \\ \hline
+CodeSutra prototype & Terminology and clinical write demonstration & Combines mapping, validation, role checks, audit, and versioning & Requires production identity, governance, and clinical validation \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 2.1: Comparison of terminology and interoperability systems}}\
+\section*{2.2 Limitations and Research Gap}
+\begin{itemize}
+\item Terminology publication and clinical-record exchange are distinct tasks. A portal can publish codes while an application still needs stable system URIs, search operations, and resource-level exchange.
+\item A mapping is not automatically an equivalence. The demo mapping file contains equivalence labels and confidence values, but those values need clinical and terminology expert review before operational use.
+\item The WHO traditional medicine classification scope and national AYUSH terminology are not identical. The project preserves the NAMASTE source code and does not claim that every source concept has a validated TM2 counterpart.
+\item FHIR resource structures do not by themselves provide identity proofing, access-control policy, or a complete consent workflow. The project's mock JWT and consent-presence check are prototype controls.
+\item The local sample corpus is bounded and does not measure performance, mapping accuracy, clinician usability, or interoperability with a live external electronic health record.
+\end{itemize}
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 3}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Proposed System}}\end{center}\vspace{8pt}
+\section*{3.1 System Overview}
+The proposed system is a modular web application. The frontend sends JSON requests to an Express API. Public terminology resources are serialized as FHIR-shaped JSON and protected operations require a bearer token and an allowed role. Prisma maps application models to PostgreSQL. A separate synchronization service can load sample ICD data or query WHO ICD API v2. An authenticated clinician can submit a transaction Bundle; the clinical service checks the request, resolves a NAMASTE-to-TM2 mapping, and writes a new Problem List version.
+
+\section*{3.2 Components of the System}
+\textbf{1. User interaction layer}
+
+The Next.js interface provides a landing page, interactive terminology playground, role-based demo login, administrative console, and links to Swagger documentation. The interface calls the API rather than connecting to PostgreSQL directly.
+
+\textbf{2. FHIR API layer}
+
+Express routes expose CodeSystem, ConceptMap, ValueSet expansion, code lookup, code translation, Bundle submission, and Patient Problem List operations. Swagger/OpenAPI documents request parameters, bearer authentication, and the Bundle JSON body.
+
+\textbf{3. Validation and security}
+
+Zod schemas validate selected request fields. JWT middleware verifies demo tokens and role middleware protects clinician and administrator operations. A FHIR access logger writes audit records after the response completes.
+
+\textbf{4. Terminology services}
+
+The ingestion service loads NAMASTE CSV records. The ICD sync service processes local sample data or live WHO responses. The terminology operations service builds expansion and lookup responses and returns mapping results as FHIR Parameters.
+
+\textbf{5. Clinical persistence}
+
+The Bundle workflow requires a Consent resource reference in the submitted Bundle and at least one Condition with a NAMASTE coding. A mapped TM2 code is added when absent. ProblemListEntry stores codes, display text, recording actor, consent identifier, version, and current status.
+
+\textbf{6. Database and demo packaging}
+
+PostgreSQL stores terminology, mappings, demo users, audit logs, and versioned Problem List records. Docker Compose defines the database, API, and frontend services; the seed workflow loads local demo files and role examples.
+
+\section*{3.3 Architecture and Framework}
+\begin{center}\small\textit{Figure 3.1 shows the logical boundaries. The web interface is a client of the API. Authentication, authorization, validation, and audit behavior surround protected routes. Terminology reads and clinical writes use separate services, while both interact with PostgreSQL. The WHO service is an external dependency used only for live synchronization.}\end{center}
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-3.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 3.1: Logical architecture of CodeSutra}}\end{center}
+\section*{3.4 Algorithm and Process Design}
+1. Load source terminology records and mappings into relational models using unique code constraints and indexes.
+
+2. For an expansion query, search NAMASTE display, definition, and native term fields together with ICD title and definition fields, then return a bounded FHIR ValueSet expansion.
+
+3. For a translation request, find the highest-confidence mapping for the source code, verify the target system, and return a FHIR Parameters resource containing match details or a no-match result.
+
+4. For a clinical write, authenticate the request, check role permissions, validate the transaction Bundle shape, locate Consent and Condition resources, and verify the NAMASTE code exists.
+
+5. If the Condition does not already contain a TM2 coding, resolve the mapping through the translation service. If no mapping exists, persist the source code and return an informational warning.
+
+6. Find the previous version for the patient and NAMASTE code. Within a database transaction, mark the current version historic and create the next append-only ProblemListEntry.
+
+7. Return a transaction-response Bundle and record the access outcome in the audit log.
+
+\section*{3.5 Details of Hardware and Software}
+The project runs as a development stack and does not require a GPU. Live terminology synchronization requires network access and a registered WHO ICD API client. Approximate local development requirements are listed below; these are practical recommendations rather than measured minimums.
+
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Category} & \textbf{Requirement / Version Used} \\ \hline
+\endfirsthead
+\hline \textbf{Category} & \textbf{Requirement / Version Used} \\ \hline\endhead
+Processor & 64-bit dual-core processor or better \\ \hline
+Memory & 8 GB RAM recommended for Docker Desktop \\ \hline
+Storage & At least 5 GB free for source, dependencies, and containers \\ \hline
+Runtime & Node.js 20 LTS for the Docker demo runtime \\ \hline
+Frontend & Next.js 15, React 19, Tailwind CSS \\ \hline
+API & Node.js, Express, Zod, JWT middleware, Swagger/OpenAPI \\ \hline
+Persistence & PostgreSQL 16 and Prisma ORM \\ \hline
+Development and tests & Docker Compose and Jest \\ \hline
+External access & WHO ICD API client credentials for live synchronization \\ \hline
+\end{longtable}
+\vspace{4pt}
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 4}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Design and Methodology}}\end{center}\vspace{8pt}
+\section*{4.1 Design Details}
+The design separates terminology source data, crosswalk records, clinical events, users, and audit events. This separation supports independent updates to terminology and mappings while allowing a clinical Problem List version to retain the specific codes and recording context present at submission time.
+
+\subsection*{4.1.1 Entity-Relationship Model}
+\begin{center}\small\textit{Figure 4.1 summarizes the core Prisma models. The diagram shows logical associations used by the services; the current Prisma schema does not declare relational foreign keys between every model, so some associations are represented through indexed string identifiers.}\end{center}
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-4.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 4.1: CodeSutra entity-relationship model}}\end{center}
+\subsubsection*{4.1.1.1 Key Entities and Attributes}
+\begin{longtable}{|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|}
+\hline
+\textbf{Entity} & \textbf{Important Attributes} & \textbf{Purpose} \\ \hline
+\endfirsthead
+\hline \textbf{Entity} & \textbf{Important Attributes} & \textbf{Purpose} \\ \hline\endhead
+NamasteConcept & code, display, definition, category, nativeTerm, version & Stores source terminology records \\ \hline
+Icd11Concept & entityId, code, title, chapter, parentId, uri & Stores TM2 and biomedicine concept records \\ \hline
+NamasteTm2Mapping & namasteCode, tm2Code, equivalence, confidence, reviewedBy & Stores translation/crosswalk records \\ \hline
+User & abhaId, name, role, facilityId & Stores prototype user and role data \\ \hline
+ProblemListEntry & patientAbhaId, codes, consentId, version, isCurrent & Stores append-only clinical entry versions \\ \hline
+AuditLog & actor, role, action, outcome, timestamp & Records FHIR route access outcomes \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 4.1: Core data entities and purposes}}\
+\subsubsection*{4.1.1.2 Relationships Between Entities}
+\begin{itemize}
+\item One NAMASTE concept can appear in multiple mapping records; the mapping table has a unique pair constraint on NAMASTE code and TM2 code.
+\item A mapping points to a target TM2 code, and the terminology service resolves its display from ICD concept data when available.
+\item A patient identifier and NAMASTE code identify the clinical series whose records are versioned. Each version stores the linked TM2 code when mapped.
+\item A user identifier can be recorded as the actor for a Problem List write and as the actor on an audit record.
+\item Audit records describe access events and do not serve as the clinical record itself.
+\end{itemize}
+\subsubsection*{4.1.1.3 Design Advantages}
+\begin{itemize}
+\item Separate terminology and crosswalk storage makes source concepts traceable.
+\item Version fields preserve the history of repeated clinical submissions.
+\item Unique constraints and indexes support code lookup and common patient/code queries.
+\item Audit events provide an operational trace of protected FHIR requests.
+\end{itemize}
+\subsection*{4.1.2 UML Activity Diagram}
+The activity flow in Figure 4.2 begins with an authenticated clinician, proceeds through terminology search and translation, and ends with a persisted current Problem List version. The system returns a warning if a source term has no target mapping, rather than fabricating a code.
+
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-5.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 4.2: Clinical dual-coding activity flow}}\end{center}
+\subsubsection*{4.1.2.1 Activity Flow}
+1. The user obtains a mock access token for a selected demo role.
+
+2. The interface calls ValueSet expansion to search both NAMASTE and ICD-11 terminology.
+
+3. The user selects a NAMASTE result and can inspect translation details.
+
+4. A clinician submits a transaction Bundle containing a Condition and Consent resource.
+
+5. Authentication, authorization, and request validation run before clinical processing.
+
+6. The service resolves a mapping, persists the codes and version, and returns a transaction-response Bundle.
+
+\subsubsection*{4.1.2.2 Features of the Activity Design}
+The source NAMASTE coding remains present in the stored Condition representation. The translation service is reused by the clinical write path. Persistence changes are grouped so the prior current version is demoted and the new version is inserted as one database transaction. The flow is designed to preserve a record even when a TM2 mapping is unavailable, with a warning that makes the limitation visible.
+
+\subsection*{4.1.3 Data Flow Diagram (DFD) - Level 1}
+\begin{center}\small\textit{Figure 4.3 shows requests entering through the API gateway, passing to terminology, clinical, or synchronization processes, and reading or writing the appropriate data stores. The WHO ICD API is an external system in the live synchronization path.}\end{center}
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-6.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 4.3: Level 1 data flow diagram}}\end{center}
+\subsubsection*{4.1.3.1 External Entities}
+Clinicians use terminology operations and submit clinical Bundles. Patients may read their own Problem List when authenticated with the matching patient identity. Administrators manage users and mappings and trigger sample or live ICD synchronization. WHO ICD API is external to the local application and is contacted only for live sync.
+
+\subsubsection*{4.1.3.2 Core Processes}
+\begin{itemize}
+\item P1 - API gateway: parses JSON or application/fhir+json, validates request fields, authenticates the bearer JWT, enforces role rules, and routes the operation.
+\item P2 - Terminology: reads concept records, expands matching terms, looks up code details, or translates between NAMASTE and TM2 through the mapping table.
+\item P3 - Clinical Bundle processing: identifies Consent and Condition entries, checks the NAMASTE code, resolves a TM2 mapping if needed, and writes a new version.
+\item P4 - ICD-11 synchronization: loads local sample data or calls the WHO API v2 endpoints using OAuth client credentials and traverses the configured release roots.
+\item P5 - Audit: records FHIR route method, actor, role, resource type, response outcome, and consent status where available.
+\end{itemize}
+\subsubsection*{4.1.3.3 Data Stores}
+The PostgreSQL database contains NAMASTE concepts, ICD concepts, mapping rows, users, audit logs, and Problem List entries. `ProblemListEntry` stores a snapshot of the source and mapped codes plus the consent identifier and version metadata. The current schema does not store complete FHIR Condition and Consent resources as standalone resource tables.
+
+\subsubsection*{4.1.3.4 External System: WHO ICD API}
+The WHO client requests a client-credentials token with the icdapi\_access scope and sends a Bearer token with API-Version v2, Accept-Language en, and an application/json Accept header [1]. The sync code supports release and linearization requests and search-based entity discovery. A valid credential set is necessary for live operation; sample mode does not prove that the external service is reachable.
+
+\subsubsection*{4.1.3.5 Workflow Summary and Design Benefits}
+A search begins at the web client and terminates in a FHIR ValueSet expansion. A clinical write begins as a transaction Bundle, passes the API checks, and ends as a versioned row and audit event. A synchronization request begins at the administrator route and terminates in local ICD concept records. Separating these processes helps isolate mapping, persistence, external-service, and authorization concerns.
+
+\section*{4.2 Methodology}
+Development followed the phased plan recorded in the project repository. The phases establish project configuration and sample data, implement NAMASTE ingestion, integrate ICD-11 synchronization, add mappings and terminology operations, add access control and audit logging, implement clinical writes, document compliance and sample payloads, build the frontend, and package the demonstration stack. Implementation proceeded from independently testable backend resources toward the integrated browser workflow.
+
+The data layer is defined in Prisma. Service modules contain terminology, synchronization, audit, and Problem List behavior. Express routes apply authentication and validation before calling controllers. Jest integration tests use a separate test database configuration. Docker Compose provides a repeatable demonstration environment, while `.env.example` documents required local configuration without embedding live credentials.
+
+\section*{4.3 Algorithm Implementation}
+The dual-coding write algorithm uses the source code as the primary key for crosswalk lookup. The mapping query selects the highest-confidence row for a NAMASTE code. If the request specifies a target system, it must match the TM2 namespace for a match to be returned. The write workflow uses the existing translation service; it does not infer codes from text or call a generative model.
+
+At persistence time, the service checks for a previous record for the same patient and NAMASTE code and computes the next version. Within a database transaction it sets the previous current record to historic, then inserts the new record with `isCurrent=true`. This preserves a version trail in the database. The implementation stores selected fields rather than retaining the full submitted Bundle.
+
+\section*{4.4 Details of Hardware and Software}
+\subsection*{4.4.1 Hardware Requirements}
+\begin{itemize}
+\item 64-bit laptop or desktop with a modern multi-core CPU.
+\item 8 GB RAM recommended when running PostgreSQL, API, and frontend containers together.
+\item At least 5 GB free disk space for dependencies, container images, and local database storage.
+\item Internet access is only required for package retrieval and WHO live synchronization; local sample mode can run without WHO credentials.
+\end{itemize}
+\subsection*{4.4.2 Software Requirements}
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Component} & \textbf{Software} \\ \hline
+\endfirsthead
+\hline \textbf{Component} & \textbf{Software} \\ \hline\endhead
+Backend language/runtime & JavaScript on Node.js 20 LTS in the Docker demo \\ \hline
+HTTP service & Express.js with JSON and FHIR JSON request parsing \\ \hline
+Validation and authentication & Zod request schemas, jsonwebtoken HS256 prototype tokens, role middleware \\ \hline
+Frontend & Next.js 15, React 19, Tailwind CSS \\ \hline
+Database and ORM & PostgreSQL 16, Prisma Client \\ \hline
+API documentation & swagger-jsdoc, Swagger UI, OpenAPI 3.0 \\ \hline
+Testing & Jest and Supertest-style HTTP integration tests \\ \hline
+Containerization & Docker and Docker Compose \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 4.2: Software requirements}}\
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 5}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Results and Discussions}}\end{center}\vspace{8pt}
+\section*{5.1 Implementation}
+\subsection*{5.1.1 User Interface Overview}
+The frontend is implemented as a Next.js client application. It presents the CodeSutra identity, a project overview, an interactive terminology playground, and an administrative console. The demonstration includes role selection, mock-token issuance, terminology search, translation details, Bundle submission, Problem List viewing, and a theme toggle. The browser communicates with the Express API through HTTP requests; Swagger UI provides a separate route for direct API exploration.
+
+\begin{center}\includegraphics[width=0.82\textwidth,height=0.68\textheight,keepaspectratio]{figures/inline-7.png}\end{center}
+\begin{center}\small\textit{\textbf{Figure 5.1: Frontend demonstration workflow}}\end{center}
+\subsection*{5.1.2 Key Features}
+\begin{itemize}
+\item Terminology discovery: ValueSet expansion returns matching NAMASTE and ICD sample concepts.
+\item Code lookup and translation: lookup returns display and metadata; translation returns the mapped code or an explicit no-match result.
+\item CodeSystem and ConceptMap endpoints: expose the terminology and crosswalk in FHIR-shaped JSON.
+\item Role-protected routes: clinicians can create Problem List entries, patients can read their own entries, and administrators manage users, mappings, and sync jobs.
+\item Problem List history: each submission creates a version; earlier versions remain available when history is requested.
+\item API documentation: Swagger UI exposes bearer authorization and a required application/json Bundle body example.
+\end{itemize}
+\subsection*{5.1.3 Terminology Search and Translation}
+The expansion service searches local concepts by display, definition, and native term. The demonstration data contains 100 NAMASTE concepts and 104 ICD concepts. Translation is backed by persisted rows in `NamasteTm2Mapping`, not by approximate text similarity at request time. For example, the local demo row for NAM001 (Jwara) maps to TM2-001 with the equivalence label `relatedto`; the report treats that row as sample data, not as a clinical endorsement.
+
+FHIR terminology operations return ValueSet for expansion, Parameters for lookup and translation, and OperationOutcome for unsupported or missing requests. Cache entries are held in process memory for the configured autocomplete interval; the cache is not shared between multiple application instances.
+
+\subsection*{5.1.4 WHO ICD-11 Synchronization}
+The administrator endpoint accepts an explicit `source` value of `sample` or `live`; an omitted value defaults to sample, while other explicit values are rejected. Sample mode loads the repository's local ICD JSON file. Live mode uses the WHO ICD API client, token caching, retry handling, configured release and linearization, and concept discovery/traversal. In local sample data, 99 entries are categorized as TM2 and 5 as biomedicine. These local records are kept distinct from data retrieved from WHO.
+
+A live sync result depends on valid WHO client credentials, correct release selection, and successful discovery of API entity URIs. The repository status records that valid live credentials are not currently available. Therefore the project report describes the live-sync implementation but does not claim a successful WHO production synchronization.
+
+\subsection*{5.1.5 Bundle Submission and Problem List}
+The documented request is a FHIR transaction Bundle with a Condition whose code contains a NAMASTE coding and a Consent entry. The Express route reads the JSON request body, applies the existing Zod request schema, and calls the Problem List service. The service requires a Consent resource with an identifier available from `Consent.id` or the entry `fullUrl`, at least one Condition, a subject reference, and a NAMASTE code present in the local terminology table. When a mapping exists and the Condition does not already include TM2, the service adds that code to the persisted representation.
+
+The consent check is intentionally limited in the current implementation: it checks for the Consent resource and an identifier, but does not evaluate the resource status, policy, scope, signer, or validity period. A FHIR Consent resource represents choices in a policy context [9]; the prototype check must not be interpreted as a complete legal or operational consent workflow.
+
+Problem List reads return a searchset Bundle containing Condition-shaped resources with NAMASTE and TM2 coding plus extensions for recording actor, consent identifier, version, and current status. Patient access is constrained to the authenticated patient's own identifier; clinician and administrator roles may read under the prototype policy.
+
+\section*{5.2 Results and Test Coverage}
+The repository's local files provide a deterministic development corpus. The row counts below were read from the current source files while preparing this report. They describe seeded sample records only and are not counts of official WHO release concepts.
+
+\begin{longtable}{|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|p{\dimexpr\textwidth/3-2\tabcolsep\relax}|}
+\hline
+\textbf{Dataset} & \textbf{Rows / Concepts} & \textbf{Role in Demonstration} \\ \hline
+\endfirsthead
+\hline \textbf{Dataset} & \textbf{Rows / Concepts} & \textbf{Role in Demonstration} \\ \hline\endhead
+NAMASTE CSV & 100 & Local source terminology records \\ \hline
+NAMASTE-to-TM2 mapping CSV & 100 & Development crosswalk rows \\ \hline
+ICD sample JSON - TM2 & 99 & Local TM2 sample concepts \\ \hline
+ICD sample JSON - biomedicine & 5 & Local biomedical sample concepts \\ \hline
+ICD sample JSON - total & 104 & Combined local ICD examples \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 5.1: Current local demonstration corpus}}\
+The test source files cover terminology ingestion, ICD sample sync, mapping exposure, expand/lookup/translate operations, authentication and authorization, audit logging, Bundle validation, automatic TM2 population, versioning, patient self-read, Swagger security documentation, demo reset, and admin mapping/user management. The database test setup is configured through `.env.test` / `TEST\_DATABASE\_URL` and includes a guard against using a non-test database URL. This report describes test coverage present in source; it does not claim a new test run during report preparation.
+
+\begin{longtable}{|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|p{\dimexpr\textwidth/2-2\tabcolsep\relax}|}
+\hline
+\textbf{Area} & \textbf{Covered Behaviors} \\ \hline
+\endfirsthead
+\hline \textbf{Area} & \textbf{Covered Behaviors} \\ \hline\endhead
+Terminology & CodeSystem ingestion, ConceptMap, expand, lookup, translate \\ \hline
+ICD sync & Sample sync, status classification, entity discovery parsing \\ \hline
+Security & Mock JWT issuance, unauthenticated rejection, role authorization, route coverage \\ \hline
+Clinical workflow & Consent requirement, NAMASTE-to-TM2 population, versioning, patient self-read \\ \hline
+Documentation & Bearer scheme, protected route declaration, executable Bundle example \\ \hline
+Administration & Demo reset, user and mapping administration, source validation \\ \hline
+\end{longtable}
+\vspace{4pt}
+\smallskip\textbf{\textbf{Table 5.2: Automated test coverage represented in the repository}}\
+\section*{5.3 Discussion and Limitations}
+The implementation demonstrates a complete vertical path from terminology search to versioned clinical storage. FHIR resources make code-system identifiers explicit, while the mapping model preserves a source-to-target association. The Bundle route reuses the translation service and keeps previously stored versions available. Swagger authorization and request examples support manual exploration without converting the Bundle into query parameters.
+
+\begin{itemize}
+\item The authentication endpoint issues prototype HS256 JWTs; it is not real ABHA OAuth2 or JWKS-based identity verification.
+\item A required Consent record is detected, but legal, policy, scope, and revocation conditions are not evaluated.
+\item The sample mapping rows need terminology and clinical review. A `relatedto`, `wider`, or `equivalent` label is not evidence of formal approval.
+\item Live WHO sync cannot be treated as verified until authorized credentials and a valid release are supplied and the run is observed against the official API.
+\item Only selected FHIR fields are validated and persisted. The application is not a complete FHIR R4 server or a substitute for a conformance validator.
+\item No latency, scale, usability, diagnostic accuracy, or clinical outcome measurements are reported.
+\end{itemize}
+\clearpage
+\clearpage\begin{center}\Large\textbf{Chapter 6}\end{center}
+\begin{center}\LARGE\textbf{\textbf{Conclusion and Future Scope}}\end{center}\vspace{8pt}
+CodeSutra demonstrates how a FHIR R4 service can preserve a NAMASTE diagnosis while attaching a corresponding ICD-11 TM2 code where a mapping is available. The implementation combines terminology ingestion, CodeSystem and ConceptMap resources, expand/lookup/translate operations, protected clinical writes, audit logging, and append-only Problem List versioning. The browser frontend and Docker Compose stack provide a path for demonstrating those functions locally.
+
+The strongest outcome is the integrated workflow: a clinician can search the source terminology, submit a Condition with a NAMASTE coding and Consent entry, and have the service persist a mapped TM2 code without requiring the client to supply that target coding. Earlier entries remain represented as history. The system also has a separate WHO live-sync path and a local sample path, making the difference between external data retrieval and deterministic demo content visible.
+
+The project remains a prototype. It does not implement real ABHA token verification, full consent-policy evaluation, formal terminology governance, or large-scale operational monitoring. The sample mapping data should be reviewed by qualified domain experts, and live WHO synchronization should be validated with valid API credentials. The FHIR implementation covers the resources and fields required by this workflow rather than the full R4 specification.
+
+\section*{Future Scope}
+\begin{itemize}
+\item Replace demo token issuance with the approved identity and authorization flow, including key rotation and issuer/audience validation.
+\item Model Consent status, purpose, parties, scope, date range, revocation, and authorization policy, and test the workflow against institutional requirements.
+\item Govern the mapping catalogue with named clinical reviewers, provenance, effective dates, review state, and change history; expand only after expert validation.
+\item Complete live WHO release discovery and synchronization testing, add scheduled refresh, synchronization checkpoints, and richer operational monitoring.
+\item Add formal FHIR profile validation, versioned API conformance statements, and interoperability tests against a separate FHIR server.
+\item Move shared caching to a production cache, configure restricted CORS and secrets management, and add deployment hardening and backup restoration exercises.
+\item Evaluate search quality, response time, mapping agreement, usability, accessibility, and clinical workflow fit with a reviewed dataset and participant protocol.
+\end{itemize}
+With these improvements, CodeSutra can progress from a demonstrator to a governed interoperability service. Clinical use would require formal review of terminology mappings, identity and consent controls, privacy and security safeguards, and institution-approved validation.
+
+\clearpage
+\clearpage\begin{center}\Large\textbf{\textbf{Bibliography}}\end{center}
+[1] World Health Organization. ICD API Documentation, Version 2: Authentication and API Overview. https://icd.who.int/docs/icd-api/API-Authentication/ and https://icd.who.int/docs/icd-api/APIDoc-Version2/. Accessed 21 October 2026.
+
+[2] World Health Organization. Traditional medicine: frequently asked questions on the ICD-11 Traditional Medicine Chapter. https://www.who.int/standards/classifications/frequently-asked-questions/traditional-medicine. Accessed 21 October 2026.
+
+[3] HL7 International. FHIR Release 4, Overview - Clinical. https://hl7.org/fhir/R4/overview-clinical.html. Accessed 21 October 2026.
+
+[4] Ministry of Ayush, Government of India. NAMASTE Portal: National AYUSH Morbidity and Standardized Terminologies Electronic Portal. https://namaste.ayush.gov.in/. Accessed 21 October 2026.
+
+[5] HL7 International. FHIR Release 4, RESTful API. https://hl7.org/fhir/R4/http.html. Accessed 21 October 2026.
+
+[6] HL7 International. FHIR Release 4, CodeSystem Resource. https://hl7.org/fhir/R4/codesystem.html. Accessed 21 October 2026.
+
+[7] HL7 International. FHIR Release 4, ConceptMap Resource. https://hl7.org/fhir/R4/conceptmap.html. Accessed 21 October 2026.
+
+[8] HL7 International. FHIR Release 4, Condition Resource. https://hl7.org/fhir/R4/condition.html. Accessed 21 October 2026.
+
+[9] HL7 International. FHIR Release 4, Consent Resource. https://hl7.org/fhir/R4/consent.html. Accessed 21 October 2026.
+
+[10] HL7 International. FHIR Release 4, Bundle Resource. https://hl7.org/fhir/R4/bundle.html. Accessed 21 October 2026.
+
+[11] HL7 International. FHIR Release 4, Security and Privacy Module. https://hl7.org/fhir/R4/secpriv-module.html. Accessed 21 October 2026.
+
+[12] Hardt, D., Ed. The OAuth 2.0 Authorization Framework. RFC 6749. Internet Engineering Task Force, 2012. https://www.rfc-editor.org/rfc/rfc6749.
+
+\clearpage
+\clearpage\begin{center}\Large\textbf{\textbf{Plagiarism Report}}\end{center}
+\clearpage
+\clearpage\begin{center}\Large\textbf{\textbf{Publication Details / Project Achievements}}\end{center}
+\textbf{Project Achievements}
+
+\begin{itemize}
+\item Implemented a FHIR-shaped terminology API for NAMASTE and ICD-11 sample terminology.
+\item Implemented bidirectional terminology translation operations backed by stored NAMASTE-to-TM2 mapping rows.
+\item Implemented a clinical transaction Bundle path that adds a mapped TM2 coding and persists append-only Problem List versions.
+\item Added JWT role controls, audit logging, Swagger bearer authorization, and an executable Bundle request example.
+\item Packaged a local demonstration environment with PostgreSQL, API, frontend, and demo seed data.
+\end{itemize}
+\clearpage
+\clearpage\begin{center}\Large\textbf{\textbf{Certificates}}\end{center}
+\end{document}

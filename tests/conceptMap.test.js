@@ -24,7 +24,7 @@ describe("NAMASTE to TM2 ConceptMap", () => {
   it("seeds mappings and exposes a valid FHIR ConceptMap", async () => {
     const summary = await seedMappings("data/sample-mappings.csv");
 
-    expect(summary.added).toBe(5);
+    expect(summary.added).toBe(100);
     expect(summary.skipped).toBe(0);
 
     const response = await request(createApp())
@@ -37,7 +37,7 @@ describe("NAMASTE to TM2 ConceptMap", () => {
     );
 
     expect(parsed.success).toBe(true);
-    expect(response.body.group[0].element).toHaveLength(5);
-    expect(equivalences).toEqual(expect.arrayContaining(["relatedto", "wider"]));
+    expect(response.body.group[0].element).toHaveLength(100);
+    expect(equivalences).toEqual(expect.arrayContaining(["relatedto", "wider", "equivalent"]));
   });
 });

@@ -1,6 +1,101 @@
 namaste_code,tm2_code,equivalence,notes,confidence,reviewed_by
-NAM001,TM2-001,relatedto,Jwara aligns with fever-related TM2 disorder pattern but is not a strict one-to-one match,0.82,demo-reviewer
-NAM002,TM2-002,wider,Prameha is broader than a single urinary or metabolic TM2 pattern,0.78,demo-reviewer
-NAM003,TM2-003,relatedto,Kasa aligns with cough disorder pattern for demo dual coding,0.84,demo-reviewer
-NAM004,TM2-004,relatedto,Siddha Azhal Noi is mapped to a broad heat-related TM2 pattern,0.72,demo-reviewer
-NAM005,TM2-001,relatedto,Humma is a Unani fever concept mapped to the demo TM2 fever pattern,0.8,demo-reviewer
+NAM001,TM2-001,relatedto,"Jwara aligns with fever-related TM2 disorder pattern but includes subtypes (Vataja, Pittaja, Kaphaja).",0.85,demo-reviewer
+NAM002,TM2-002,wider,"Prameha is a broad 20-subtype metabolic spectrum encompassing diabetes and glucosuria.",0.88,demo-reviewer
+NAM003,TM2-003,equivalent,"Kasa aligns directly with traditional medicine cough disorder concept.",0.92,demo-reviewer
+NAM004,TM2-005,equivalent,"Shwasa encompasses Tamaka Shwasa (bronchial asthma) and acute dyspneic episodes.",0.9,demo-reviewer
+NAM005,TM2-006,relatedto,"Amavata corresponds clinically with rheumatoid arthritis and systemic inflammatory arthropathy.",0.88,demo-reviewer
+NAM006,TM2-007,equivalent,"Sandhivata correlates directly with osteoarthritis in clinical presentation.",0.91,demo-reviewer
+NAM007,TM2-008,equivalent,"Kamala includes Shakhashrita (obstructive) and Kosthashrita (hepatocellular) jaundice.",0.94,demo-reviewer
+NAM008,TM2-009,equivalent,"Atisara maps directly to traditional acute diarrheal disease patterns.",0.93,demo-reviewer
+NAM009,TM2-010,relatedto,"Corresponds to chronic enteropathy, sprue, and irritable bowel syndrome.",0.86,demo-reviewer
+NAM010,TM2-011,equivalent,"Arshas encompasses internal and external hemorrhoidal disease.",0.95,demo-reviewer
+NAM011,TM2-012,equivalent,"Clinically equivalent to fistula-in-ano in modern surgical terms.",0.95,demo-reviewer
+NAM012,TM2-013,wider,"Medoroga encompasses obesity, hyperlipidemia, and metabolic syndrome.",0.87,demo-reviewer
+NAM013,TM2-014,wider,"Includes Hrit-shoola (angina) and cardiac arrhythmias.",0.84,demo-reviewer
+NAM014,TM2-015,wider,"Shiroroga encompasses tension headaches, vascular cephalalgia, and Ardhavabhedaka (migraine).",0.89,demo-reviewer
+NAM015,TM2-016,equivalent,"Directly equivalent to clinical sciatica / lumbosacral nerve root compression.",0.94,demo-reviewer
+NAM016,TM2-017,wider,"Broad traditional taxonomy subdivided into 7 Maha Kushta and 11 Kshudra Kushta.",0.82,demo-reviewer
+NAM017,TM2-018,equivalent,"Corresponds specifically to plaque psoriasis (EA90).",0.91,demo-reviewer
+NAM018,TM2-019,equivalent,"Equivalent to vitiligo and leukoderma in modern terminology.",0.96,demo-reviewer
+NAM019,TM2-020,wider,"Encompasses Jalodara (ascites) and intra-abdominal fluid accumulation syndromes.",0.85,demo-reviewer
+NAM020,TM2-021,relatedto,"Clinically associated with pulmonary tuberculosis and chronic wasting syndromes.",0.84,demo-reviewer
+NAM021,TM2-022,relatedto,"Corresponds to psychosis and bipolar affective spectrum disorders.",0.81,demo-reviewer
+NAM022,TM2-023,equivalent,"Maps directly to epileptic seizure disorders in ICD-11 (8A60).",0.93,demo-reviewer
+NAM023,TM2-024,equivalent,"Directly corresponds to gout / hyperuricemic arthritis (FA25).",0.95,demo-reviewer
+NAM024,TM2-025,equivalent,"Maps to hemiplegia following cerebrovascular accident / stroke (8B20).",0.92,demo-reviewer
+NAM025,TM2-026,equivalent,"Maps directly to Bell palsy / facial nerve palsy (8B80).",0.95,demo-reviewer
+NAM026,TM2-027,equivalent,"Clinically maps to cervical spondylosis and acute torticollis.",0.91,demo-reviewer
+NAM027,TM2-028,equivalent,"Maps to low back pain (ME84).",0.95,demo-reviewer
+NAM028,TM2-029,equivalent,"Clinically corresponds to localized knee osteoarthritis or internal derangement.",0.9,demo-reviewer
+NAM029,TM2-030,equivalent,"Corresponds directly to gastro-esophageal reflux disease (GERD - DA22).",0.94,demo-reviewer
+NAM030,TM2-031,equivalent,"Maps to functional dyspepsia and delayed gastric emptying.",0.91,demo-reviewer
+NAM031,TM2-032,equivalent,"Direct match for emesis and vomiting (MD90).",0.95,demo-reviewer
+NAM032,TM2-033,equivalent,"Maps to polydipsia symptom pattern in ICD-11.",0.9,demo-reviewer
+NAM033,TM2-034,equivalent,"Maps to syncope and collapse (MG45).",0.93,demo-reviewer
+NAM034,TM2-035,equivalent,"Directly correlates with obesity (5B81).",0.93,demo-reviewer
+NAM035,TM2-036,equivalent,"Correlates with undernutrition, wasting, and cachexia.",0.88,demo-reviewer
+NAM036,TM2-037,wider,"Includes iron-deficiency anemia (3A70) and hemolytic presentations.",0.92,demo-reviewer
+NAM037,TM2-038,wider,"Encompasses purpura, epistaxis, and coagulation defect manifestations.",0.87,demo-reviewer
+NAM038,TM2-039,equivalent,"Maps to singultus / hiccup disorder.",0.95,demo-reviewer
+NAM039,TM2-040,equivalent,"Maps to acute nasopharyngitis / allergic rhinitis (CA01).",0.94,demo-reviewer
+NAM040,TM2-041,equivalent,"Maps to chronic sinusitis (CA08).",0.92,demo-reviewer
+NAM041,TM2-042,equivalent,"Direct match for goitre / thyromegaly (5A00).",0.94,demo-reviewer
+NAM042,TM2-043,relatedto,"Corresponds to chronic cervical lymphadenitis / scrofula.",0.89,demo-reviewer
+NAM043,TM2-044,equivalent,"Maps directly to lymphatic filariasis (1F66).",0.96,demo-reviewer
+NAM044,TM2-045,equivalent,"Maps to cutaneous or visceral abscess.",0.93,demo-reviewer
+NAM045,TM2-046,wider,"Includes traumatic, venous, and neuropathic ulcer patterns.",0.9,demo-reviewer
+NAM046,TM2-047,equivalent,"Equivalent to pilonidal sinus and cutaneous sinus tracts.",0.92,demo-reviewer
+NAM047,TM2-048,wider,"Corresponds to chancroid, genital herpes, and venereal ulcer spectra.",0.85,demo-reviewer
+NAM048,TM2-049,equivalent,"Maps to erectile dysfunction (HA00).",0.94,demo-reviewer
+NAM049,TM2-050,equivalent,"Corresponds to premature ejaculation.",0.91,demo-reviewer
+NAM050,TM2-051,wider,"Encompasses endometriosis, pelvic inflammatory disease, and vaginitis.",0.83,demo-reviewer
+NAM051,TM2-052,equivalent,"Directly maps to menorrhagia (GA20).",0.95,demo-reviewer
+NAM052,TM2-053,equivalent,"Maps directly to primary and secondary dysmenorrhoea (GA34).",0.96,demo-reviewer
+NAM053,TM2-054,relatedto,"Clinically associated with polycystic ovary syndrome (PCOS - 5A80).",0.87,demo-reviewer
+NAM054,TM2-055,wider,"Encompasses puerperal infection and postpartum morbidity.",0.85,demo-reviewer
+NAM055,TM2-056,relatedto,"Pediatric emergency pattern often linked with febrile seizures or viral encephalitis.",0.8,demo-reviewer
+NAM056,TM2-057,equivalent,"Corresponds to pediatric rickets and marasmus.",0.9,demo-reviewer
+NAM057,TM2-058,equivalent,"Direct clinical correlation with anal fissure (DB61).",0.96,demo-reviewer
+NAM058,TM2-059,equivalent,"Maps directly to calculus of kidney and ureter (GB20).",0.95,demo-reviewer
+NAM059,TM2-060,equivalent,"Direct match for dysuria (GC00) and lower urinary tract symptoms.",0.95,demo-reviewer
+NAM060,TM2-061,wider,"Maps to benign prostatic enlargement (GA80) and bladder outlet obstruction.",0.89,demo-reviewer
+NAM061,TM2-004,relatedto,"Siddha Azhal Noi is mapped to a broad heat-related TM2 pattern.",0.85,demo-reviewer
+NAM062,TM2-062,wider,"Encompasses generalized neurological and musculoskeletal degenerative patterns.",0.84,demo-reviewer
+NAM063,TM2-063,wider,"Covers chronic bronchitis, productive cough, and bronchial hypersecretion.",0.86,demo-reviewer
+NAM064,TM2-064,relatedto,"Maps to peptic ulcer disease and non-ulcer dyspeptic colic.",0.88,demo-reviewer
+NAM065,TM2-065,equivalent,"Maps directly to clinical edema (MG22) and dropsy patterns.",0.94,demo-reviewer
+NAM066,TM2-066,equivalent,"Equivalent to hemorrhoids (DB60).",0.94,demo-reviewer
+NAM067,TM2-067,wider,"Encompasses diabetes mellitus and chronic metabolic disorders in Siddha.",0.83,demo-reviewer
+NAM068,TM2-068,equivalent,"Corresponds to vitiligo (ED60).",0.95,demo-reviewer
+NAM069,TM2-069,equivalent,"Corresponds directly to atopic dermatitis / eczema (EA80).",0.93,demo-reviewer
+NAM070,TM2-070,equivalent,"Maps to alopecia areata (ED70).",0.96,demo-reviewer
+NAM071,TM2-071,equivalent,"Direct match for psoriasis vulgaris (EA90).",0.93,demo-reviewer
+NAM072,TM2-072,relatedto,"Maps to degenerative osteoarthritis and peripheral arthropathy.",0.88,demo-reviewer
+NAM073,TM2-073,equivalent,"Matches acute gouty arthritis (FA25).",0.92,demo-reviewer
+NAM074,TM2-074,equivalent,"Corresponds to kidney calculus (GB20).",0.96,demo-reviewer
+NAM075,TM2-075,equivalent,"Maps to rheumatoid arthritis (FA20) and ankylosing spondylitis (FA21).",0.92,demo-reviewer
+NAM076,TM2-076,equivalent,"Direct match for type 2 diabetes mellitus (5A10).",0.95,demo-reviewer
+NAM077,TM2-077,equivalent,"Matches clinical jaundice and viral hepatitis presentation.",0.93,demo-reviewer
+NAM078,TM2-078,wider,"Encompasses chronic hepatitis, fatty liver, and cirrhosis.",0.87,demo-reviewer
+NAM079,TM2-079,equivalent,"Maps to paraplegia and transverse myelitis patterns.",0.9,demo-reviewer
+NAM080,TM2-080,equivalent,"Corresponds to acute cerebrovascular hemiplegia.",0.92,demo-reviewer
+NAM081,TM2-001,relatedto,"Humma is a Unani fever concept mapped to the demo TM2 fever pattern.",0.85,demo-reviewer
+NAM082,TM2-081,equivalent,"Direct match for Type 2 diabetes mellitus (5A10).",0.95,demo-reviewer
+NAM083,TM2-082,wider,"Covers rheumatoid and non-rheumatoid inflammatory joint diseases.",0.88,demo-reviewer
+NAM084,TM2-083,equivalent,"Direct match for acute gout (FA25).",0.96,demo-reviewer
+NAM085,TM2-084,equivalent,"Direct clinical correlation with sciatica / radiculopathy.",0.95,demo-reviewer
+NAM086,TM2-085,equivalent,"Direct match for hemiplegia following cerebrovascular accident.",0.93,demo-reviewer
+NAM087,TM2-086,equivalent,"Maps directly to Bell palsy (8B80).",0.95,demo-reviewer
+NAM088,TM2-087,equivalent,"Direct correlation with epilepsy (8A60).",0.94,demo-reviewer
+NAM089,TM2-088,wider,"Encompasses tension headache and diffuse cephalalgia.",0.9,demo-reviewer
+NAM090,TM2-089,equivalent,"Direct match for migraine (8A80).",0.95,demo-reviewer
+NAM091,TM2-090,equivalent,"Matches bronchial asthma (CA23).",0.94,demo-reviewer
+NAM092,TM2-091,equivalent,"Matches acute nasopharyngitis (CA01).",0.95,demo-reviewer
+NAM093,TM2-092,equivalent,"Direct match for functional dyspepsia.",0.92,demo-reviewer
+NAM094,TM2-093,equivalent,"Matches acute diarrhea and gastroenteritis (1A40).",0.94,demo-reviewer
+NAM095,TM2-094,relatedto,"Corresponds to severe intestinal colic and subacute obstruction.",0.86,demo-reviewer
+NAM096,TM2-095,equivalent,"Direct match for clinical jaundice / icterus.",0.94,demo-reviewer
+NAM097,TM2-096,equivalent,"Direct match for hemorrhoids (DB60).",0.95,demo-reviewer
+NAM098,TM2-097,equivalent,"Direct match for calculus of kidney (GB20).",0.95,demo-reviewer
+NAM099,TM2-098,relatedto,"Historically correlated with Hansen disease / chronic severe granulomatous dermatosis.",0.84,demo-reviewer
+NAM100,TM2-099,equivalent,"Direct match for vitiligo (ED60).",0.96,demo-reviewer

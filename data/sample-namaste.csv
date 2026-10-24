@@ -1,6 +1,101 @@
 code,display,nativeTerm,definition,category,version,effectiveDate
-NAM001,Jwara,ज्वर,Fever or febrile condition described in Ayurveda,ayurveda,2026-demo,2026-01-01
-NAM002,Prameha,प्रमेह,Urinary disorder cluster often discussed with metabolic illness,ayurveda,2026-demo,2026-01-01
-NAM003,Kasa,कास,Cough as described in traditional diagnosis,ayurveda,2026-demo,2026-01-01
-NAM004,Azhal Noi,அழல் நோய்,Siddha heat-related disease pattern,siddha,2026-demo,2026-01-01
-NAM005,Humma,حمى,Fever concept in Unani terminology,unani,2026-demo,2026-01-01
+NAM001,Jwara,ज्वर,"Fever or febrile condition described in Ayurveda characterized by elevated body temperature and santapa",ayurveda,2026-demo,2026-01-01
+NAM002,Prameha,प्रमेह,"Metabolic and urinary disorder cluster characterized by polyuria, turbid urine, and sweet body fluids",ayurveda,2026-demo,2026-01-01
+NAM003,Kasa,कास,"Cough disorder pattern arising from vitiated Prana and Udana Vayu with or without sputum",ayurveda,2026-demo,2026-01-01
+NAM004,Shwasa,श्वास,"Dyspnea, bronchial asthma, and labored breathing disorder",ayurveda,2026-demo,2026-01-01
+NAM005,Amavata,आमवात,"Inflammatory polyarthritis caused by accumulation of Ama (endotoxins) in joint spaces",ayurveda,2026-demo,2026-01-01
+NAM006,Sandhivata,संधिवात,"Degenerative osteoarthritis characterized by joint crepitus, pain on movement, and cartilage loss",ayurveda,2026-demo,2026-01-01
+NAM007,Kamala,कामला,"Hepatic jaundice syndrome marked by yellow discoloration of sclera, urine, and skin",ayurveda,2026-demo,2026-01-01
+NAM008,Atisara,अतिसार,"Acute or chronic diarrhea characterized by rapid expulsion of watery stools",ayurveda,2026-demo,2026-01-01
+NAM009,Grahani,ग्रहणी,"Malabsorption syndrome and irritable bowel disorder with alternating loose and hard stools",ayurveda,2026-demo,2026-01-01
+NAM010,Arshas,अर्श,"Anorectal vascular engorgement, piles, or hemorrhoids with bleeding and protrusion",ayurveda,2026-demo,2026-01-01
+NAM011,Bhagandara,भगन्दर,"Fistula-in-ano with deep discharging perineal tracts opening into perianal skin",ayurveda,2026-demo,2026-01-01
+NAM012,Medoroga,मेदरोग,"Metabolic syndrome and excessive adiposity caused by Medo Dhatu accumulation",ayurveda,2026-demo,2026-01-01
+NAM013,Hridroga,हृद्रोग,"Cardiac disease pattern with chest distress, palpitations, and ischemic sensations",ayurveda,2026-demo,2026-01-01
+NAM014,Shiroroga,शिरोरोग,"Cephalalgia, headache disorders, and migraine patterns originating from cranial Dosha vitiation",ayurveda,2026-demo,2026-01-01
+NAM015,Gridhrasi,गृध्रसी,"Sciatica and lumbosacral radiculopathy with pain radiating from hip down the leg",ayurveda,2026-demo,2026-01-01
+NAM016,Kushta,कुष्ठ,"Comprehensive spectrum of chronic inflammatory and proliferative dermatological disorders",ayurveda,2026-demo,2026-01-01
+NAM017,Kitibha,किटिभ,"Scaly, indurated erythematous dermatosis resembling plaque psoriasis",ayurveda,2026-demo,2026-01-01
+NAM018,Shvitra,श्वित्र,"Idiopathic hypopigmentation and circumscribed depigmentation of skin",ayurveda,2026-demo,2026-01-01
+NAM019,Udara Roga,उदर रोग,"Abdominal enlargement disorders including ascites, hepatosplenomegaly, and intestinal tympanites",ayurveda,2026-demo,2026-01-01
+NAM020,Rajayakshma,यक्ष्मा,"Systemic consumptive wasting disease characterized by tri-rupa or ekadasha-rupa symptoms",ayurveda,2026-demo,2026-01-01
+NAM021,Unmada,उन्माद,"Psychiatric disorder characterized by cognitive, affective, and behavioral disorientation",ayurveda,2026-demo,2026-01-01
+NAM022,Apasmara,अपस्मार,"Epilepsy and paroxysmal convulsive seizure disorder with momentary loss of consciousness",ayurveda,2026-demo,2026-01-01
+NAM023,Vatarakta,वातरक्त,"Metabolic arthropathy characterized by acute pain, erythema, and burning sensation in big toe and joints",ayurveda,2026-demo,2026-01-01
+NAM024,Pakshaghata,पक्षाघात,"Unilateral hemiplegia, paralysis, and loss of sensation resulting from cerebral Vata obstruction",ayurveda,2026-demo,2026-01-01
+NAM025,Ardita,अर्धित,"Acute facial paralysis and facial nerve palsy characterized by facial asymmetry and eye closure weakness",ayurveda,2026-demo,2026-01-01
+NAM026,Manyastambha,मन्यास्तम्भ,"Cervical rigidity, neck muscle spasm, and cervical spondylosis pain restricting head rotation",ayurveda,2026-demo,2026-01-01
+NAM027,Katishoola,कटिशूल,"Lumbago and lower back pain originating from lumbar spine and paravertebral musculature",ayurveda,2026-demo,2026-01-01
+NAM028,Janushoola,जानुशूल,"Gonalgia and localized knee joint pain with crepitus and mobility limitation",ayurveda,2026-demo,2026-01-01
+NAM029,Amlapitta,अम्लपित्त,"Hyperacidity, acid reflux, heartburn, and sour eructations caused by Vidagdha Pitta",ayurveda,2026-demo,2026-01-01
+NAM030,Agnimandya,अग्निमांद्य,"Impaired digestive fire, functional dyspepsia, and chronic postprandial fullness",ayurveda,2026-demo,2026-01-01
+NAM031,Chhardi,छर्दि,"Nausea and vomiting disorder with forceful retrograde ejection of stomach contents",ayurveda,2026-demo,2026-01-01
+NAM032,Trishna,तृष्णा,"Morbid polydipsia and unquenchable thirst despite frequent fluid intake",ayurveda,2026-demo,2026-01-01
+NAM033,Murchha,मूर्च्छा,"Syncope, vasovagal faintness, and transient cerebral hypoperfusion",ayurveda,2026-demo,2026-01-01
+NAM034,Sthaulya,स्थौल्य,"Constitutional obesity and excessive accumulation of adipose tissue in abdomen and buttocks",ayurveda,2026-demo,2026-01-01
+NAM035,Karshya,कार्श्य,"Constitutional emaciation, cachexia, and failure to thrive with prominent bony contours",ayurveda,2026-demo,2026-01-01
+NAM036,Pandu,पाण्डु,"Anemia syndrome characterized by pallor of conjunctiva, fatigue, palpitations, and pedal edema",ayurveda,2026-demo,2026-01-01
+NAM037,Raktapitta,रक्तपित्त,"Bleeding diathesis and hemorrhagic disorder manifesting via epistaxis, hematemesis, or hematuria",ayurveda,2026-demo,2026-01-01
+NAM038,Hikka,हिक्का,"Singultus, intractable hiccup disorder resulting from diaphragmatic and vagal irritation",ayurveda,2026-demo,2026-01-01
+NAM039,Pratishyaya,प्रतिश्याय,"Acute catarrhal rhinitis, allergic rhinitis, and common cold symptoms",ayurveda,2026-demo,2026-01-01
+NAM040,Pinasa,पीनस,"Chronic atrophic or hypertrophic sinusitis with foul-smelling nasal crusts and anosmia",ayurveda,2026-demo,2026-01-01
+NAM041,Galaganda,गलगण्ड,"Goitre and thyroid enlargement presenting as a painless or compressive anterior neck swelling",ayurveda,2026-demo,2026-01-01
+NAM042,Gandamala,गण्डमाला,"Cervical lymphadenopathy and tuberculous scrofuloderma presenting as a chain of nodular swellings",ayurveda,2026-demo,2026-01-01
+NAM043,Shleepada,श्लीपद,"Filariasis and elephantiasis presenting with chronic non-pitting lymphedema of lower limbs",ayurveda,2026-demo,2026-01-01
+NAM044,Vidradhi,विद्रधि,"Abscess and deep-seated suppurative inflammatory mass with throbbing pain and fever",ayurveda,2026-demo,2026-01-01
+NAM045,Vrana,व्रण,"Chronic cutaneous ulceration, non-healing wound, and bedsores with slough or granulations",ayurveda,2026-demo,2026-01-01
+NAM046,Nadi Vrana,नाडीव्रण,"Sinus tract, pilonidal sinus, and deep blind-ending discharging fibrous tracts",ayurveda,2026-demo,2026-01-01
+NAM047,Upadansha,उपदंश,"Genital ulcerative disease and venereal infections characterized by painful lesions on genitalia",ayurveda,2026-demo,2026-01-01
+NAM048,Klaibya,क्लैब्य,"Erectile dysfunction, sexual weakness, and male psychogenic or organic impotence",ayurveda,2026-demo,2026-01-01
+NAM049,Shukragata Vata,शुक्रगत वात,"Premature ejaculation and hyperaesthetic ejaculatory urgency in males",ayurveda,2026-demo,2026-01-01
+NAM050,Yonivyapad,योनिव्यापद,"Comprehensive spectrum of twenty gynecological disorders affecting uterus, cervix, and vagina",ayurveda,2026-demo,2026-01-01
+NAM051,Asrigdara,असृग्दर,"Menorrhagia, hypermenorrhea, and dysfunctional uterine bleeding during menstrual cycles",ayurveda,2026-demo,2026-01-01
+NAM052,Kashtartava,कष्टार्तव,"Dysmenorrhea and severe spasmodic lower abdominal pelvic cramping during menstruation",ayurveda,2026-demo,2026-01-01
+NAM053,Artavavriddhi,आर्तववृद्धि,"Polycystic ovarian morphology, anovulatory menstrual cycles, and hyperandrogenic state",ayurveda,2026-demo,2026-01-01
+NAM054,Sutika Roga,सूतिका रोग,"Puerperal sepsis, postpartum pyrexia, and convalescent complications following childbirth",ayurveda,2026-demo,2026-01-01
+NAM055,Balagraha,बालग्रह,"Pediatric neuro-behavioral syndrome marked by sudden fever, crying, convulsions, and food refusal",ayurveda,2026-demo,2026-01-01
+NAM056,Phakka Roga,फक्क रोग,"Nutritional rickets and pediatric severe malnutrition leading to inability to walk at age one",ayurveda,2026-demo,2026-01-01
+NAM057,Parikartika,परिकर्तिका,"Acute anal fissure with sharp cutting pain during defecation and scant streaks of bright blood",ayurveda,2026-demo,2026-01-01
+NAM058,Ashmari,अश्मरी,"Urolithiasis, nephrolithiasis, and bladder calculus causing colicky flank pain and hematuria",ayurveda,2026-demo,2026-01-01
+NAM059,Mutrakrichhra,मूत्रकृच्छ्र,"Dysuria, burning micturition, and painful strangury associated with urinary tract infection",ayurveda,2026-demo,2026-01-01
+NAM060,Mutraghata,मूत्राघात,"Obstructive uropathy, urinary retention, and benign prostatic hyperplasia symptoms",ayurveda,2026-demo,2026-01-01
+NAM061,Azhal Noi,அழல் நோய்,"Siddha heat-predominant disease pattern driven by vitiated Azhal (Pitta) humor",siddha,2026-demo,2026-01-01
+NAM062,Vali Noi,வளி நோய்,"Siddha neural and musculoskeletal disorder pattern driven by deranged Vali (Vata) humor",siddha,2026-demo,2026-01-01
+NAM063,Aiya Noi,ஐய நோய்,"Siddha phlegm-dominant disease pattern marked by mucus congestion, heaviness, and pallor",siddha,2026-demo,2026-01-01
+NAM064,Gunmam,குன்மம்,"Eight varieties of peptic ulcer, abdominal colic, and epigastric burning pain in Siddha",siddha,2026-demo,2026-01-01
+NAM065,Sobai,சோபை,"Systemic edema, anasarca, and generalized fluid retention across bodily tissues in Siddha",siddha,2026-demo,2026-01-01
+NAM066,Eruvai Mulai,எருவாய் முளை,"Siddha term for hemorrhoidal venous cushions and anal vascular masses",siddha,2026-demo,2026-01-01
+NAM067,Meganoigal,மேகநோய்கள்,"Cluster of 21 chronic metabolic and genitourinary disorders with glycosuria and polyuria",siddha,2026-demo,2026-01-01
+NAM068,Venpadai,வெண்படை,"Siddha leukoderma and localized patchy depigmentation of epidermal areas",siddha,2026-demo,2026-01-01
+NAM069,Karappan,கரப்பான்,"Infantile and adult eczema with intense pruritus, oozing, and lichenification",siddha,2026-demo,2026-01-01
+NAM070,Puzhuvettu,புழுவெட்டு,"Alopecia areata and circumscribed smooth coin-shaped hair loss patches on scalp",siddha,2026-demo,2026-01-01
+NAM071,Kaalanjagapadai,காளாஞ்சகப்படை,"Chronic plaque psoriasis in Siddha with silvery scales, Auspitz sign, and erythematous borders",siddha,2026-demo,2026-01-01
+NAM072,Vali Keel Vayu,வளி கீழ் வாயு,"Chronic polyarthritis and degenerative joint inflammation in Siddha driven by Vali",siddha,2026-demo,2026-01-01
+NAM073,Azhal Keel Vayu,அழல் கீழ் வாயு,"Acute hot inflammatory arthritis and podagra presenting with intense throbbing pain",siddha,2026-demo,2026-01-01
+NAM074,Siruneeraga Kal,சிறுநீரகக் கல்,"Siddha nephrolithiasis and ureteric calculus disease with agonizing radiating loin pain",siddha,2026-demo,2026-01-01
+NAM075,Mudakku Vatham,முடக்கு வாதம்,"Deforming rheumatoid arthritis and ankylosing spondylitis with morning stiffness and flexion contractures",siddha,2026-demo,2026-01-01
+NAM076,Neerizhivu,நீரிழிவு,"Diabetes mellitus in Siddha characterised by sweet tasting excessive urination and wasting",siddha,2026-demo,2026-01-01
+NAM077,Manjal Noi,மஞ்சள் நோய்,"Siddha jaundice and biliary dysfunction marked by bright yellow eyes, dark urine, and anorexia",siddha,2026-demo,2026-01-01
+NAM078,Kalleeral Noi,கல்லீரல் நோய்,"Hepatobiliary disorder and hepatic congestion with right upper quadrant tenderness in Siddha",siddha,2026-demo,2026-01-01
+NAM079,Thandaga Vatham,தண்டக வாதம்,"Paraplegia and spinal motor neuron debility resulting in bilateral lower extremity paralysis",siddha,2026-demo,2026-01-01
+NAM080,Pakka Vatham,பக்க வாதம்,"Siddha stroke syndrome and hemiplegia characterized by half-sided limb weakness and speech impairment",siddha,2026-demo,2026-01-01
+NAM081,Humma,حمى,"Systemic fever in Unani medicine resulting from Hararat-e-Gharibiya (extraneous heat) in rooh and humors",unani,2026-demo,2026-01-01
+NAM082,Ziabetus Shakari,ذیابیطس شکری,"Diabetes mellitus in Unani characterized by kidney weakness (Zof-e-Kulyah), thirst, and sugar in urine",unani,2026-demo,2026-01-01
+NAM083,Waja-ul-Mafasil,وجع المفاصل,"Polyarthralgia and generalized articular pain caused by accumulation of morbid humors (Mawad-e-Fasida)",unani,2026-demo,2026-01-01
+NAM084,Niqras,نقرس,"Gout and podagra in Unani with intense excruciating pain and erythema in the big toe (Ibhām)",unani,2026-demo,2026-01-01
+NAM085,Irq-un-Nasa,عرق النسا,"Sciatica in Unani medicine characterized by shooting pain starting at hip joint and descending to heel",unani,2026-demo,2026-01-01
+NAM086,Falij,فالج,"Hemiplegia and stroke-induced unilateral paralysis caused by occlusion in cerebral ventricle pathways",unani,2026-demo,2026-01-01
+NAM087,Laqwa,لقوہ,"Facial nerve paralysis (Bell palsy) causing lateral mouth deviation and inability to close the eyelid",unani,2026-demo,2026-01-01
+NAM088,Sara,صرع,"Epilepsy and paroxysmal cerebral convulsions in Unani accompanied by frothing and unconsciousness",unani,2026-demo,2026-01-01
+NAM089,Suda,صداع,"Cephalea and headache disorders arising from vaporous or sanguineous cerebral distension",unani,2026-demo,2026-01-01
+NAM090,Shaqiqa,شقیقہ,"Hemicrania and migraine in Unani with paroxysmal unilateral throbbing, photophobia, and nausea",unani,2026-demo,2026-01-01
+NAM091,Zeequn Nafas,ضیق النفس,"Bronchial asthma and respiratory constriction with wheezing respiration and chest tightness",unani,2026-demo,2026-01-01
+NAM092,Nazla-o-Zukam,نزلہ و زکام,"Acute catarrh, coryza, and common cold with profuse watery rhinorrhea and pharyngeal irritation",unani,2026-demo,2026-01-01
+NAM093,Su-e-Hazm,سوء ہضم,"Dyspepsia and sluggish gastric digestion due to weakness of Quwwat-e-Hazima (digestive faculty)",unani,2026-demo,2026-01-01
+NAM094,Ishal,اسہال,"Diarrhea in Unani characterized by frequent loose watery bowel movements and intestinal weakness",unani,2026-demo,2026-01-01
+NAM095,Qulanj,قولنج,"Spasmodic intestinal colic and intestinal spasm with severe griping abdominal pain and obstipation",unani,2026-demo,2026-01-01
+NAM096,Yarqan,یرقان,"Jaundice in Unani medicine with yellow discoloration of skin and eyes due to Safra (yellow bile) overflow",unani,2026-demo,2026-01-01
+NAM097,Bawaseer,بواسیر,"Hemorrhoids and piles in Unani medicine caused by thick melancholic blood accumulating in anal veins",unani,2026-demo,2026-01-01
+NAM098,Hasat-e-Kulyah,حصاة کلیہ,"Renal calculus and kidney stones in Unani formed from thick phlegm and excessive internal heat",unani,2026-demo,2026-01-01
+NAM099,Juzam,جذام,"Systemic granulomatous and chronic ulcerative skin pattern in Unani caused by burnt black bile (Sauda)",unani,2026-demo,2026-01-01
+NAM100,Bars,برص,"Leukoderma and vitiligo in Unani presenting as milk-white skin patches caused by deficient nutritive faculty",unani,2026-demo,2026-01-01

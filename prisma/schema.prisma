@@ -83,3 +83,19 @@ model ProblemListEntry {
   @@index([namasteCode])
   @@index([patientAbhaId, namasteCode, isCurrent])
 }
+
+model User {
+  id         Int      @id @default(autoincrement())
+  abhaId     String   @unique
+  name       String
+  role       String   // CLINICIAN, PATIENT, ADMIN
+  facilityId String?
+  email      String?
+  phone      String?
+  specialty  String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([role])
+  @@index([abhaId])
+}
